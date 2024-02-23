@@ -1,107 +1,69 @@
-cmake_minimum_required(VERSION 3.1)
+# toplevel CMakeLists.txt for a catkin workspace
+# catkin/cmake/toplevel.cmake
 
-project(f1tenth_simulator)
+cmake_minimum_required(VERSION 3.0.2)
 
-set(CMAKE_CXX_STANDARD 11)
+project(Project)
 
-if(NOT CMAKE_BUILD_TYPE)
-  set (CMAKE_BUILD_TYPE Release)
+set(CATKIN_TOPLEVEL TRUE)
+
+# search for catkin within the workspace
+set(_cmd "catkin_find_pkg" "catkin" "${CMAKE_SOURCE_DIR}")
+execute_process(COMMAND ${_cmd}
+  RESULT_VARIABLE _res
+  OUTPUT_VARIABLE _out
+  ERROR_VARIABLE _err
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+  ERROR_STRIP_TRAILING_WHITESPACE
+)
+if(NOT _res EQUAL 0 AND NOT _res EQUAL 2)
+  # searching fot catkin resulted in an error
+  string(REPLACE ";" " " _cmd_str "${_cmd}")
+  message(FATAL_ERROR "Search for 'catkin' in workspace failed (${_cmd_str}): ${_err}")
 endif()
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g") 
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+# include catkin from workspace or via find_package()
+if(_res EQUAL 0)
+  set(catkin_EXTRAS_DIR "${CMAKE_SOURCE_DIR}/${_out}/cmake")
+  # include all.cmake without add_subdirectory to let it operate in same scope
+  include(${catkin_EXTRAS_DIR}/all.cmake NO_POLICY_SCOPE)
+  add_subdirectory("${_out}")
 
-find_package(Eigen3)
+else()
+  # use either CMAKE_PREFIX_PATH explicitly passed to CMake as a command line argument
+  # or CMAKE_PREFIX_PATH from the environment
+  if(NOT DEFINED CMAKE_PREFIX_PATH)
+    if(NOT "$ENV{CMAKE_PREFIX_PATH}" STREQUAL "")
+      if(NOT WIN32)
+        string(REPLACE ":" ";" CMAKE_PREFIX_PATH $ENV{CMAKE_PREFIX_PATH})
+      else()
+        set(CMAKE_PREFIX_PATH $ENV{CMAKE_PREFIX_PATH})
+      endif()
+    endif()
+  endif()
 
-######################################
-# Compile the library >
-######################################
-
-# Add includes
-include_directories(include)
-file(GLOB SRC_FILES src/*.cpp)
-add_library(${PROJECT_NAME} ${SRC_FILES})
-target_link_libraries(${PROJECT_NAME} ${LIBS})
-set(LIBS ${LIBS} ${PROJECT_NAME})
-
-# Install the library to CMAKE_INSTALL_PREFIX
-# which defaults to /usr/local
-install(TARGETS ${PROJECT_NAME}
-        DESTINATION lib)
-install(DIRECTORY include/${PROJECT_NAME}
-        DESTINATION include)
-
-######################################
-# < End compile the library
-######################################
-
-######################################
-# ROS >
-######################################
-
-# Only run this code in the catkin environment
-if(DEFINED CATKIN_DEVEL_PREFIX)
-  find_package(catkin REQUIRED COMPONENTS
-    roslib
-    roscpp
-    tf2
-    tf2_ros
-    tf2_geometry_msgs
-    ackermann_msgs
-    nav_msgs
-    sensor_msgs
-    geometry_msgs
-
-    interactive_markers
-    visualization_msgs
-
-    std_msgs
-    message_generation
-    )
-
-  generate_messages(
-    DEPENDENCIES
-    std_msgs
-    nav_msgs
-    sensor_msgs
-    )
-
-
-
-
-  # Include catkin_libraries
-  catkin_package(
-      INCLUDE_DIRS include
-      LIBRARIES ${PROJECT_NAME}
-      CATKIN_DEPENDS message_runtime
-  )
-  set(LIBS ${LIBS} ${catkin_LIBRARIES})
-  include_directories(include ${catkin_INCLUDE_DIRS})
-  link_directories(/usr/lib/aarch64-linux-gnu/tegra)	
-
-  
-
-  # Add the nodes
-  file(GLOB NODE_SRC_FILES node/*.cpp)
-  foreach(_node_file ${NODE_SRC_FILES})
-      get_filename_component(_node_name ${_node_file} NAME_WE)
-      add_executable(${_node_name} ${_node_file})
-      target_link_libraries(${_node_name} ${LIBS})
-      add_dependencies(${_node_name} f1tenth_simulator_generate_messages_cpp)
+  # list of catkin workspaces
+  set(catkin_search_path "")
+  foreach(path ${CMAKE_PREFIX_PATH})
+    if(EXISTS "${path}/.catkin")
+      list(FIND catkin_search_path ${path} _index)
+      if(_index EQUAL -1)
+        list(APPEND catkin_search_path ${path})
+      endif()
+    endif()
   endforeach()
 
-  # Install the library
-  install(TARGETS ${PROJECT_NAME}
-      ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-      LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-      RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-  )
-  install(DIRECTORY include/${PROJECT_NAME}/
-      DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  )
+  # search for catkin in all workspaces
+  set(CATKIN_TOPLEVEL_FIND_PACKAGE TRUE)
+  find_package(catkin QUIET
+    NO_POLICY_SCOPE
+    PATHS ${catkin_search_path}
+    NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
+  unset(CATKIN_TOPLEVEL_FIND_PACKAGE)
+
+  if(NOT catkin_FOUND)
+    message(FATAL_ERROR "find_package(catkin) failed. catkin was neither found in the workspace nor in the CMAKE_PREFIX_PATH. One reason may be that no ROS setup.sh was sourced before.")
+  endif()
 endif()
 
-######################################
-# < End ROS
-######################################
+catkin_workspace()
