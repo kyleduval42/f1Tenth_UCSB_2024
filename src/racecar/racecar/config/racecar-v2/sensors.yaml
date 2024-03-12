@@ -1,0 +1,6 @@
+
+laser_node:
+  device: /dev/sensors/rplidar
+
+imu_node:
+  device: /dev/imu

@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/sandbox/devel
+
+Name: vesc_msgs
+Description: Description of vesc_msgs
+Version: 0.0.1
+Cflags: -I/home/f1tenth/sandbox/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime

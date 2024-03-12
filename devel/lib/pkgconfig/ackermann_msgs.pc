@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/sandbox/devel
+
+Name: ackermann_msgs
+Description: Description of ackermann_msgs
+Version: 1.0.1
+Cflags: -I/home/f1tenth/sandbox/devel/include -I/usr/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

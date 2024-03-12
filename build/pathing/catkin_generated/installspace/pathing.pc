@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/sandbox/install
+
+Name: pathing
+Description: Description of pathing
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lpathing
+Requires: message_runtime

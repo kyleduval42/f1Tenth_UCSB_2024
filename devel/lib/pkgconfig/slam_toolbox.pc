@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/sandbox/devel
+
+Name: slam_toolbox
+Description: Description of slam_toolbox
+Version: 1.5.7
+Cflags: -I/home/f1tenth/sandbox/src/slam/slam_toolbox/include -I/usr/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib -lceres_solver_plugin -ltoolbox_lib -lslam_toolbox_rviz_plugin /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0 /usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0 /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0 /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+Requires: message_filters nav_msgs rosconsole roscpp sparse_bundle_adjustment sensor_msgs tf2 tf tf2_ros visualization_msgs pluginlib message_runtime tf2_geometry_msgs interactive_markers slam_toolbox_msgs

@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/sandbox/devel
+
+Name: sparse_bundle_adjustment
+Description: Description of sparse_bundle_adjustment
+Version: 0.4.4
+Cflags: -I/home/f1tenth/sandbox/src/sparse_bundle_adjustment-melodic-devel/include
+Libs: -L${prefix}/lib -lsba
+Requires: 
