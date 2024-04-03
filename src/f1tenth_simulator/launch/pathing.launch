@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <!-- Launch the mux node with the parameters from params.yaml -->
+  <node pkg="f1tenth_simulator" name="mux_controller" type="mux" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+
+  <!-- Launch the behavior controller node with the parameters from params.yaml -->
+  <node pkg="f1tenth_simulator" name="behavior_controller" type="behavior_controller" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+
+  <!-- Launch the Random Walker Node -->
+  <node pkg="f1tenth_simulator" name="random_walker" type="random_walk" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+
+  <!-- Launch the Keyboard Node -->
+  <node pkg="f1tenth_simulator" name="keyboard" type="keyboard" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+  
+  <!-- Launch the Wall Follow Node -->
+  <node pkg="f1tenth_simulator" name="wall_follow" type="wall_follow" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+  
+  <!-- navigation -->
+  <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="convert.py" output="screen"/>
+  
+  <!-- Launch the racecar model -->
+    <include file="$(find f1tenth_simulator)/launch/racecar_model.launch"/>
+
+
+</launch>
