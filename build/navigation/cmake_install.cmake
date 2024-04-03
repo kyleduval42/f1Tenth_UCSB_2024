@@ -1,8 +1,8 @@
-# Install script for directory: /home/f1tenth/sandbox/src/navigation
+# Install script for directory: /home/f1tenth/f1Tenth_UCSB_2024/src/navigation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/sandbox/install")
+  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/f1Tenth_UCSB_2024/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

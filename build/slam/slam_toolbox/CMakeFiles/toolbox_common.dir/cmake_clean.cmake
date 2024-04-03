@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/sandbox/devel/lib/libtoolbox_common.pdb"
-  "/home/f1tenth/sandbox/devel/lib/libtoolbox_common.so"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libtoolbox_common.pdb"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libtoolbox_common.so"
   "CMakeFiles/toolbox_common.dir/src/laser_utils.cpp.o"
   "CMakeFiles/toolbox_common.dir/src/loop_closure_assistant.cpp.o"
   "CMakeFiles/toolbox_common.dir/src/map_saver.cpp.o"

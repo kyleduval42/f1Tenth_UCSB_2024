@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for move_base_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build: move_base
 .PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 
 navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/clean:
-	cd /home/f1tenth/sandbox/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/clean
 
 navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/navigation /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/navigation /home/f1tenth/sandbox/build/navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/navigation /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/navigation /home/f1tenth/f1Tenth_UCSB_2024/build/navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/depend
 

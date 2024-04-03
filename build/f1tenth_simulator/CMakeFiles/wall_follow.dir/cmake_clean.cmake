@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/sandbox/devel/lib/f1tenth_simulator/wall_follow"
-  "/home/f1tenth/sandbox/devel/lib/f1tenth_simulator/wall_follow.pdb"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/wall_follow"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/wall_follow.pdb"
   "CMakeFiles/wall_follow.dir/node/wall_follow.cpp.o"
 )
 

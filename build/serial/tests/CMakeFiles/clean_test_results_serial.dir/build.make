@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for clean_test_results_serial.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
 include serial/tests/CMakeFiles/clean_test_results_serial.dir/progress.make
 
 serial/tests/CMakeFiles/clean_test_results_serial:
-	cd /home/f1tenth/sandbox/build/serial/tests && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/f1tenth/sandbox/build/test_results/serial
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial/tests && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/f1tenth/f1Tenth_UCSB_2024/build/test_results/serial
 
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial.dir/build.make
@@ -67,10 +67,10 @@ serial/tests/CMakeFiles/clean_test_results_serial.dir/build: clean_test_results_
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/build
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/clean:
-	cd /home/f1tenth/sandbox/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/clean
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/serial/tests /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/serial/tests /home/f1tenth/sandbox/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/serial/tests /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/serial/tests /home/f1tenth/f1Tenth_UCSB_2024/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/depend
 

@@ -67,14 +67,14 @@ set(slam_toolbox_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(slam_toolbox_SOURCE_PREFIX /home/f1tenth/sandbox/src/slam/slam_toolbox)
-  set(slam_toolbox_DEVEL_PREFIX /home/f1tenth/sandbox/devel)
+  set(slam_toolbox_SOURCE_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox)
+  set(slam_toolbox_DEVEL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/devel)
   set(slam_toolbox_INSTALL_PREFIX "")
   set(slam_toolbox_PREFIX ${slam_toolbox_DEVEL_PREFIX})
 else()
   set(slam_toolbox_SOURCE_PREFIX "")
   set(slam_toolbox_DEVEL_PREFIX "")
-  set(slam_toolbox_INSTALL_PREFIX /home/f1tenth/sandbox/install)
+  set(slam_toolbox_INSTALL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/install)
   set(slam_toolbox_PREFIX ${slam_toolbox_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(slam_toolbox_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/f1tenth/sandbox/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
+if(NOT "/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
   set(slam_toolbox_INCLUDE_DIRS "")
-  set(_include_dirs "/home/f1tenth/sandbox/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3")
+  set(_include_dirs "/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/f1tenth/sandbox/src/slam/slam_toolbox/include;/usr/include;/usr/in
         message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/f1tenth/sandbox/src/slam/slam_toolbox/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/${idir}'.  ${_report}")
     endif()
     _list_append_unique(slam_toolbox_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/f1tenth/sandbox/devel/lib;/home/f1tenth/sandbox/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

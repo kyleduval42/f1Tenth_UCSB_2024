@@ -1,4 +1,4 @@
-prefix=/home/f1tenth/sandbox/install
+prefix=/home/f1tenth/f1Tenth_UCSB_2024/install
 
 Name: vesc_ackermann
 Description: Description of vesc_ackermann

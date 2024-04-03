@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/f1tenth/sandbox/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp" "/home/f1tenth/sandbox/build/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o"
-  "/home/f1tenth/sandbox/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp" "/home/f1tenth/sandbox/build/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o"
+  "/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o"
+  "/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,8 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/f1tenth/sandbox/src/vesc/vesc_ackermann/include"
-  "/home/f1tenth/sandbox/devel/include"
+  "/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

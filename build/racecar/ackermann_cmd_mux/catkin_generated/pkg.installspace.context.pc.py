@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;pluginlib;nodelet;dynamic_reconfigure;ackermann_msgs;rospy;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lackermann_cmd_mux_nodelet;-lyaml-cpp".split(';') if "-lackermann_cmd_mux_nodelet;-lyaml-cpp" != "" else []
 PROJECT_NAME = "ackermann_cmd_mux"
-PROJECT_SPACE_DIR = "/home/f1tenth/sandbox/install"
+PROJECT_SPACE_DIR = "/home/f1tenth/f1Tenth_UCSB_2024/install"
 PROJECT_VERSION = "0.7.0"

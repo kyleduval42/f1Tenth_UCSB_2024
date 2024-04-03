@@ -1,4 +1,4 @@
-prefix=/home/f1tenth/sandbox/devel
+prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
 
 Name: joy
 Description: Description of joy

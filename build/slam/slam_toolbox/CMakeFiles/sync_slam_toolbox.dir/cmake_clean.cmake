@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/sandbox/devel/lib/libsync_slam_toolbox.pdb"
-  "/home/f1tenth/sandbox/devel/lib/libsync_slam_toolbox.so"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libsync_slam_toolbox.pdb"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libsync_slam_toolbox.so"
   "CMakeFiles/sync_slam_toolbox.dir/src/slam_toolbox_sync.cpp.o"
 )
 

@@ -6,5 +6,5 @@ CXX_FLAGS =  -fpermissive -std=c++17 -ftemplate-backtrace-limit=0 -O3 -DNDEBUG -
 
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DROS_BUILD_SHARED_LIBS=1 -DkartoSlamToolbox_EXPORTS
 
-CXX_INCLUDES = -I/home/f1tenth/sandbox/src/slam/slam_toolbox/lib/karto_sdk/include -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include -I/usr/include/eigen3 
 

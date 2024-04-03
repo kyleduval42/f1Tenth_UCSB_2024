@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for vesc_msgs_genpy.
 
@@ -63,10 +63,10 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/build: vesc_msgs_genpy
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/build
 
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/clean:
-	cd /home/f1tenth/sandbox/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/vesc_msgs_genpy.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/vesc_msgs_genpy.dir/cmake_clean.cmake
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/clean
 
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/vesc/vesc_msgs /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/vesc/vesc_msgs /home/f1tenth/sandbox/build/vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_msgs /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_msgs /home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/depend
 

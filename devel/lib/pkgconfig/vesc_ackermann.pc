@@ -1,8 +1,8 @@
-prefix=/home/f1tenth/sandbox/devel
+prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
 
 Name: vesc_ackermann
 Description: Description of vesc_ackermann
 Version: 0.0.1
-Cflags: -I/home/f1tenth/sandbox/src/vesc/vesc_ackermann/include
+Cflags: -I/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include
 Libs: -L${prefix}/lib 
 Requires: nodelet pluginlib roscpp nav_msgs std_msgs geometry_msgs tf ackermann_msgs vesc_msgs

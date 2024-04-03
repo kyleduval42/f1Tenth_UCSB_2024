@@ -1,8 +1,8 @@
-# Install script for directory: /home/f1tenth/sandbox/src/f1tenth_simulator
+# Install script for directory: /home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/sandbox/install")
+  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/f1Tenth_UCSB_2024/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/f1tenth/sandbox/devel/lib/libf1tenth_simulator.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libf1tenth_simulator.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -57,42 +57,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator/cmake" TYPE FILE FILES "/home/f1tenth/sandbox/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator/cmake" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/f1tenth/sandbox/devel/share/roseus/ros/f1tenth_simulator")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/f1tenth_simulator")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/f1tenth/sandbox/devel/lib/python3/dist-packages/f1tenth_simulator")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/f1tenth_simulator")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/f1tenth/sandbox/devel/lib/python3/dist-packages/f1tenth_simulator")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/f1tenth_simulator")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/f1tenth/sandbox/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator/cmake" TYPE FILE FILES "/home/f1tenth/sandbox/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator/cmake" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulator-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator/cmake" TYPE FILE FILES
-    "/home/f1tenth/sandbox/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulatorConfig.cmake"
-    "/home/f1tenth/sandbox/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulatorConfig-version.cmake"
+    "/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulatorConfig.cmake"
+    "/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/catkin_generated/installspace/f1tenth_simulatorConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator" TYPE FILE FILES "/home/f1tenth/sandbox/src/f1tenth_simulator/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/f1tenth_simulator" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -102,7 +102,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/f1tenth/sandbox/devel/lib/libf1tenth_simulator.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libf1tenth_simulator.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libf1tenth_simulator.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -115,6 +115,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/f1tenth_simulator" TYPE DIRECTORY FILES "/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/f1tenth_simulator" TYPE DIRECTORY FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/")
 endif()
 

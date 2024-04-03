@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/sandbox/devel/lib/libf1tenth_simulator.pdb"
-  "/home/f1tenth/sandbox/devel/lib/libf1tenth_simulator.so"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libf1tenth_simulator.pdb"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libf1tenth_simulator.so"
   "CMakeFiles/f1tenth_simulator.dir/src/distance_transform.cpp.o"
   "CMakeFiles/f1tenth_simulator.dir/src/ks_kinematics.cpp.o"
   "CMakeFiles/f1tenth_simulator.dir/src/precompute.cpp.o"

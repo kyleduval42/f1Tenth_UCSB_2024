@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/car_state.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/precompute.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/precompute.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/behavior_controller.cpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/behavior_controller.cpp
 ros/ros.h
 -
 ros/package.h
@@ -32,9 +32,9 @@ std_msgs/String.h
 fstream
 -
 f1tenth_simulator/car_state.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/car_state.hpp
 f1tenth_simulator/precompute.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/precompute.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/precompute.hpp
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

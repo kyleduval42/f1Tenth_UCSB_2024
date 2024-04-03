@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/f1tenth/sandbox/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/f1tenth/f1Tenth_UCSB_2024/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/sandbox/devel/lib/libceres_solver_plugin.pdb"
-  "/home/f1tenth/sandbox/devel/lib/libceres_solver_plugin.so"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libceres_solver_plugin.pdb"
+  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libceres_solver_plugin.so"
   "CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o"
 )
 

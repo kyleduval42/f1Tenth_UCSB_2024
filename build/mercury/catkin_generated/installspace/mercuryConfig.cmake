@@ -67,14 +67,14 @@ set(mercury_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mercury_SOURCE_PREFIX /home/f1tenth/sandbox/src/mercury)
-  set(mercury_DEVEL_PREFIX /home/f1tenth/sandbox/devel)
+  set(mercury_SOURCE_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/src/mercury)
+  set(mercury_DEVEL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/devel)
   set(mercury_INSTALL_PREFIX "")
   set(mercury_PREFIX ${mercury_DEVEL_PREFIX})
 else()
   set(mercury_SOURCE_PREFIX "")
   set(mercury_DEVEL_PREFIX "")
-  set(mercury_INSTALL_PREFIX /home/f1tenth/sandbox/install)
+  set(mercury_INSTALL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/install)
   set(mercury_PREFIX ${mercury_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/f1tenth/sandbox/install/lib;/home/f1tenth/sandbox/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/f1tenth/f1Tenth_UCSB_2024/install/lib;/home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

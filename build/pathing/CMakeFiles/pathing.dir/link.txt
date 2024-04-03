@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Wall -Wextra -O3  -shared -Wl,-soname,libpathing.so -o /home/f1tenth/sandbox/devel/lib/libpathing.so CMakeFiles/pathing.dir/src/distance_transform.cpp.o CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o CMakeFiles/pathing.dir/src/precompute.cpp.o CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o CMakeFiles/pathing.dir/src/st_kinematics.cpp.o 

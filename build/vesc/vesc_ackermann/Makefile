@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/sandbox/build/CMakeFiles /home/f1tenth/sandbox/build/vesc/vesc_ackermann/CMakeFiles/progress.marks
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/sandbox/build/CMakeFiles 0
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles /home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_ackermann/CMakeFiles/progress.marks
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/clean
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/preinstall
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/preinstall
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
 .PHONY : vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ vesc_ackermann_nodelet: vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.di
 
 # fast build rule for target.
 vesc_ackermann_nodelet/fast:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build
 .PHONY : vesc_ackermann_nodelet/fast
 
 # Convenience name for target.
 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule
 .PHONY : vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ ackermann_to_vesc_node: vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.di
 
 # fast build rule for target.
 ackermann_to_vesc_node/fast:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build
 .PHONY : ackermann_to_vesc_node/fast
 
 # Convenience name for target.
 vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule
 .PHONY : vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ vesc_to_odom_node: vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/rule
 
 # fast build rule for target.
 vesc_to_odom_node/fast:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build
 .PHONY : vesc_to_odom_node/fast
 
 src/ackermann_to_vesc.o: src/ackermann_to_vesc.cpp.o
@@ -218,8 +218,8 @@ src/ackermann_to_vesc.o: src/ackermann_to_vesc.cpp.o
 
 # target to build an object file
 src/ackermann_to_vesc.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.o
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o
 .PHONY : src/ackermann_to_vesc.cpp.o
 
 src/ackermann_to_vesc.i: src/ackermann_to_vesc.cpp.i
@@ -228,8 +228,8 @@ src/ackermann_to_vesc.i: src/ackermann_to_vesc.cpp.i
 
 # target to preprocess a source file
 src/ackermann_to_vesc.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.i
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.i
 .PHONY : src/ackermann_to_vesc.cpp.i
 
 src/ackermann_to_vesc.s: src/ackermann_to_vesc.cpp.s
@@ -238,8 +238,8 @@ src/ackermann_to_vesc.s: src/ackermann_to_vesc.cpp.s
 
 # target to generate assembly for a file
 src/ackermann_to_vesc.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.s
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.s
 .PHONY : src/ackermann_to_vesc.cpp.s
 
 src/ackermann_to_vesc_node.o: src/ackermann_to_vesc_node.cpp.o
@@ -248,7 +248,7 @@ src/ackermann_to_vesc_node.o: src/ackermann_to_vesc_node.cpp.o
 
 # target to build an object file
 src/ackermann_to_vesc_node.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o
 .PHONY : src/ackermann_to_vesc_node.cpp.o
 
 src/ackermann_to_vesc_node.i: src/ackermann_to_vesc_node.cpp.i
@@ -257,7 +257,7 @@ src/ackermann_to_vesc_node.i: src/ackermann_to_vesc_node.cpp.i
 
 # target to preprocess a source file
 src/ackermann_to_vesc_node.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.i
 .PHONY : src/ackermann_to_vesc_node.cpp.i
 
 src/ackermann_to_vesc_node.s: src/ackermann_to_vesc_node.cpp.s
@@ -266,7 +266,7 @@ src/ackermann_to_vesc_node.s: src/ackermann_to_vesc_node.cpp.s
 
 # target to generate assembly for a file
 src/ackermann_to_vesc_node.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.s
 .PHONY : src/ackermann_to_vesc_node.cpp.s
 
 src/ackermann_to_vesc_nodelet.o: src/ackermann_to_vesc_nodelet.cpp.o
@@ -275,7 +275,7 @@ src/ackermann_to_vesc_nodelet.o: src/ackermann_to_vesc_nodelet.cpp.o
 
 # target to build an object file
 src/ackermann_to_vesc_nodelet.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.o
 .PHONY : src/ackermann_to_vesc_nodelet.cpp.o
 
 src/ackermann_to_vesc_nodelet.i: src/ackermann_to_vesc_nodelet.cpp.i
@@ -284,7 +284,7 @@ src/ackermann_to_vesc_nodelet.i: src/ackermann_to_vesc_nodelet.cpp.i
 
 # target to preprocess a source file
 src/ackermann_to_vesc_nodelet.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.i
 .PHONY : src/ackermann_to_vesc_nodelet.cpp.i
 
 src/ackermann_to_vesc_nodelet.s: src/ackermann_to_vesc_nodelet.cpp.s
@@ -293,7 +293,7 @@ src/ackermann_to_vesc_nodelet.s: src/ackermann_to_vesc_nodelet.cpp.s
 
 # target to generate assembly for a file
 src/ackermann_to_vesc_nodelet.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.s
 .PHONY : src/ackermann_to_vesc_nodelet.cpp.s
 
 src/vesc_to_odom.o: src/vesc_to_odom.cpp.o
@@ -302,8 +302,8 @@ src/vesc_to_odom.o: src/vesc_to_odom.cpp.o
 
 # target to build an object file
 src/vesc_to_odom.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.o
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o
 .PHONY : src/vesc_to_odom.cpp.o
 
 src/vesc_to_odom.i: src/vesc_to_odom.cpp.i
@@ -312,8 +312,8 @@ src/vesc_to_odom.i: src/vesc_to_odom.cpp.i
 
 # target to preprocess a source file
 src/vesc_to_odom.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.i
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.i
 .PHONY : src/vesc_to_odom.cpp.i
 
 src/vesc_to_odom.s: src/vesc_to_odom.cpp.s
@@ -322,8 +322,8 @@ src/vesc_to_odom.s: src/vesc_to_odom.cpp.s
 
 # target to generate assembly for a file
 src/vesc_to_odom.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.s
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.s
 .PHONY : src/vesc_to_odom.cpp.s
 
 src/vesc_to_odom_node.o: src/vesc_to_odom_node.cpp.o
@@ -332,7 +332,7 @@ src/vesc_to_odom_node.o: src/vesc_to_odom_node.cpp.o
 
 # target to build an object file
 src/vesc_to_odom_node.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.o
 .PHONY : src/vesc_to_odom_node.cpp.o
 
 src/vesc_to_odom_node.i: src/vesc_to_odom_node.cpp.i
@@ -341,7 +341,7 @@ src/vesc_to_odom_node.i: src/vesc_to_odom_node.cpp.i
 
 # target to preprocess a source file
 src/vesc_to_odom_node.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.i
 .PHONY : src/vesc_to_odom_node.cpp.i
 
 src/vesc_to_odom_node.s: src/vesc_to_odom_node.cpp.s
@@ -350,7 +350,7 @@ src/vesc_to_odom_node.s: src/vesc_to_odom_node.cpp.s
 
 # target to generate assembly for a file
 src/vesc_to_odom_node.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.s
 .PHONY : src/vesc_to_odom_node.cpp.s
 
 src/vesc_to_odom_nodelet.o: src/vesc_to_odom_nodelet.cpp.o
@@ -359,7 +359,7 @@ src/vesc_to_odom_nodelet.o: src/vesc_to_odom_nodelet.cpp.o
 
 # target to build an object file
 src/vesc_to_odom_nodelet.cpp.o:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.o
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.o
 .PHONY : src/vesc_to_odom_nodelet.cpp.o
 
 src/vesc_to_odom_nodelet.i: src/vesc_to_odom_nodelet.cpp.i
@@ -368,7 +368,7 @@ src/vesc_to_odom_nodelet.i: src/vesc_to_odom_nodelet.cpp.i
 
 # target to preprocess a source file
 src/vesc_to_odom_nodelet.cpp.i:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.i
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.i
 .PHONY : src/vesc_to_odom_nodelet.cpp.i
 
 src/vesc_to_odom_nodelet.s: src/vesc_to_odom_nodelet.cpp.s
@@ -377,7 +377,7 @@ src/vesc_to_odom_nodelet.s: src/vesc_to_odom_nodelet.cpp.s
 
 # target to generate assembly for a file
 src/vesc_to_odom_nodelet.cpp.s:
-	cd /home/f1tenth/sandbox/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.s
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom_nodelet.cpp.s
 .PHONY : src/vesc_to_odom_nodelet.cpp.s
 
 # Help Target
@@ -425,6 +425,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

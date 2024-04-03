@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/sandbox/build/CMakeFiles /home/f1tenth/sandbox/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/sandbox/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1802,7 +1802,7 @@ rplidarNodeClient: cmake_check_build_system
 
 # fast build rule for target.
 rplidarNodeClient/fast:
-	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+	$(MAKE) -f lidar/CMakeFiles/rplidarNodeClient.dir/build.make lidar/CMakeFiles/rplidarNodeClient.dir/build
 .PHONY : rplidarNodeClient/fast
 
 #=============================================================================
@@ -1815,7 +1815,7 @@ rplidarNode: cmake_check_build_system
 
 # fast build rule for target.
 rplidarNode/fast:
-	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+	$(MAKE) -f lidar/CMakeFiles/rplidarNode.dir/build.make lidar/CMakeFiles/rplidarNode.dir/build
 .PHONY : rplidarNode/fast
 
 #=============================================================================

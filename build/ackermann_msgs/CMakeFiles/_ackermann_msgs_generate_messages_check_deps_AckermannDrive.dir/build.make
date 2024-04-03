@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for _ackermann_msgs_generate_messages_check_deps_AckermannDrive.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
 include ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/progress.make
 
 ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive:
-	cd /home/f1tenth/sandbox/build/ackermann_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ackermann_msgs /home/f1tenth/sandbox/src/ackermann_msgs/msg/AckermannDrive.msg 
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/ackermann_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ackermann_msgs /home/f1tenth/f1Tenth_UCSB_2024/src/ackermann_msgs/msg/AckermannDrive.msg 
 
 _ackermann_msgs_generate_messages_check_deps_AckermannDrive: ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive
 _ackermann_msgs_generate_messages_check_deps_AckermannDrive: ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/build.make
@@ -67,10 +67,10 @@ ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_Ackermann
 .PHONY : ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/build
 
 ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/clean:
-	cd /home/f1tenth/sandbox/build/ackermann_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/ackermann_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/cmake_clean.cmake
 .PHONY : ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/clean
 
 ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/ackermann_msgs /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/ackermann_msgs /home/f1tenth/sandbox/build/ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/ackermann_msgs /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/ackermann_msgs /home/f1tenth/f1Tenth_UCSB_2024/build/ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ackermann_msgs/CMakeFiles/_ackermann_msgs_generate_messages_check_deps_AckermannDrive.dir/depend
 

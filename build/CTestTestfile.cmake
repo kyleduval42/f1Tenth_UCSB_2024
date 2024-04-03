@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/f1tenth/sandbox/src
-# Build directory: /home/f1tenth/sandbox/build
+# Source directory: /home/f1tenth/f1Tenth_UCSB_2024/src
+# Build directory: /home/f1tenth/f1Tenth_UCSB_2024/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -16,7 +16,7 @@ subdirs("vesc/vesc_msgs")
 subdirs("sparse_bundle_adjustment-melodic-devel")
 subdirs("racecar/ackermann_cmd_mux")
 subdirs("joystick_drivers/joy")
-subdirs("rplidar_ros")
+subdirs("lidar")
 subdirs("f1tenth_simulator")
 subdirs("slam/slam_toolbox")
 subdirs("twist_to_ackermann")

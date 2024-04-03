@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/sandbox/devel/include/ackermann_msgs/AckermannDrive.h
+/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/sandbox/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,13 +42,13 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/channel.h
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/channel.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/mux.cpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/mux.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
@@ -66,7 +66,7 @@ sensor_msgs/Joy.h
 std_msgs/String.h
 -
 f1tenth_simulator/channel.h
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/channel.h
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/channel.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

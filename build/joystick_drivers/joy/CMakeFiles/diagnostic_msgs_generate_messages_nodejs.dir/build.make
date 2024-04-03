@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for diagnostic_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/bui
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/f1tenth/sandbox/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/joystick_drivers/joy /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/joystick_drivers/joy /home/f1tenth/sandbox/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/joystick_drivers/joy /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend
 

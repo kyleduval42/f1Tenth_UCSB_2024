@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/sandbox/devel/include/ackermann_msgs/AckermannDrive.h
+/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/sandbox/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,37 +42,37 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/ackermann_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/ackermann_kinematics.hpp
 f1tenth_simulator/pose_2d.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/pose_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/pose_2d.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/car_params.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/car_params.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/car_state.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/ks_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/ks_kinematics.hpp
 f1tenth_simulator/car_state.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_state.hpp
 f1tenth_simulator/car_params.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_params.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_params.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/pose_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/pose_2d.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/precompute.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/precompute.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/scan_simulator_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/scan_simulator_2d.hpp
 random
 -
 f1tenth_simulator/pose_2d.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/pose_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/pose_2d.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/st_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/st_kinematics.hpp
 f1tenth_simulator/car_state.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_state.hpp
 f1tenth_simulator/car_params.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_params.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/f1tenth_simulator/f1tenth_simulator/car_params.hpp
 
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/simulator.cpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/simulator.cpp
 ros/ros.h
 -
 interactive_markers/interactive_marker_server.h
@@ -102,21 +102,21 @@ geometry_msgs/PoseStamped.h
 geometry_msgs/PointStamped.h
 -
 f1tenth_simulator/pose_2d.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/pose_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/pose_2d.hpp
 f1tenth_simulator/ackermann_kinematics.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/ackermann_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/ackermann_kinematics.hpp
 f1tenth_simulator/scan_simulator_2d.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/scan_simulator_2d.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/scan_simulator_2d.hpp
 f1tenth_simulator/car_state.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/car_state.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/car_state.hpp
 f1tenth_simulator/car_params.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/car_params.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/car_params.hpp
 f1tenth_simulator/ks_kinematics.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/ks_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/ks_kinematics.hpp
 f1tenth_simulator/st_kinematics.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/st_kinematics.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/st_kinematics.hpp
 f1tenth_simulator/precompute.hpp
-/home/f1tenth/sandbox/src/f1tenth_simulator/node/f1tenth_simulator/precompute.hpp
+/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/f1tenth_simulator/precompute.hpp
 iostream
 -
 math.h

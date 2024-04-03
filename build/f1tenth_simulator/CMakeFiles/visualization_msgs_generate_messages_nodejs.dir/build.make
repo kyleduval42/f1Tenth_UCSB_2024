@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/sandbox/src
+CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/sandbox/build
+CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
 
 # Utility rule file for visualization_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/bui
 .PHONY : f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 
 f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/f1tenth/sandbox/build/f1tenth_simulator && $(CMAKE_COMMAND) -P CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator && $(CMAKE_COMMAND) -P CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean
 
 f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/f1tenth/sandbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/sandbox/src /home/f1tenth/sandbox/src/f1tenth_simulator /home/f1tenth/sandbox/build /home/f1tenth/sandbox/build/f1tenth_simulator /home/f1tenth/sandbox/build/f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_simulator/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/depend
 
