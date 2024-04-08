@@ -1,0 +1,35 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <!-- vesc, lidar, tf -->
+  <include file="$(find racecar)/launch/teleop.launch">
+    
+  </include>
+ 
+    <!-- planner framework -->
+  <include file="$(find f1tenth_simulator)/launch/pathing.launch">
+  </include>
+
+    <!-- slam -->
+  <include file="$(find slam_toolbox)/launch/online_sync.launch">
+  </include>
+  
+  
+  <include file="$(find mercury_nav)/move_base.launch"/>
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
+      
+  <!-- Initial Pose and Goal Publisher -->
+  <!-- Publish: /initialpose, /move_base_simple/goal -->
+
+
+  <!-- Subscribe: /initialpose, /move_base_simple/goal -->
+  <!-- Publish: /initial_2d, /goal_2d --> 
+  
+  
+  <!-- Add AMCL example for differential drive robots for Localization -->
+  <!-- Subscribe: /scan, /tf, /initialpose, /map -->
+  <!-- Publish: /amcl_pose, /particlecloud, /tf -->
+  <include file="$(find amcl)/examples/amcl_diff.launch"/>
+
+</launch>

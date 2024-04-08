@@ -183,6 +183,21 @@ wall_follow/fast:
 .PHONY : wall_follow/fast
 
 # Convenience name for target.
+f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/rule:
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/rule
+.PHONY : f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/rule
+
+# Convenience name for target.
+rviz_click_to_2d: f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/rule
+
+.PHONY : rviz_click_to_2d
+
+# fast build rule for target.
+rviz_click_to_2d/fast:
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build.make f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build
+.PHONY : rviz_click_to_2d/fast
+
+# Convenience name for target.
 f1tenth_simulator/CMakeFiles/random_walk.dir/rule:
 	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_simulator/CMakeFiles/random_walk.dir/rule
 .PHONY : f1tenth_simulator/CMakeFiles/random_walk.dir/rule
@@ -920,6 +935,33 @@ node/random_walk.cpp.s:
 	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f f1tenth_simulator/CMakeFiles/random_walk.dir/build.make f1tenth_simulator/CMakeFiles/random_walk.dir/node/random_walk.cpp.s
 .PHONY : node/random_walk.cpp.s
 
+node/rviz_click_to_2d.o: node/rviz_click_to_2d.cpp.o
+
+.PHONY : node/rviz_click_to_2d.o
+
+# target to build an object file
+node/rviz_click_to_2d.cpp.o:
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build.make f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/node/rviz_click_to_2d.cpp.o
+.PHONY : node/rviz_click_to_2d.cpp.o
+
+node/rviz_click_to_2d.i: node/rviz_click_to_2d.cpp.i
+
+.PHONY : node/rviz_click_to_2d.i
+
+# target to preprocess a source file
+node/rviz_click_to_2d.cpp.i:
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build.make f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/node/rviz_click_to_2d.cpp.i
+.PHONY : node/rviz_click_to_2d.cpp.i
+
+node/rviz_click_to_2d.s: node/rviz_click_to_2d.cpp.s
+
+.PHONY : node/rviz_click_to_2d.s
+
+# target to generate assembly for a file
+node/rviz_click_to_2d.cpp.s:
+	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(MAKE) -f f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build.make f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/node/rviz_click_to_2d.cpp.s
+.PHONY : node/rviz_click_to_2d.cpp.s
+
 node/simulator.o: node/simulator.cpp.o
 
 .PHONY : node/simulator.o
@@ -1119,6 +1161,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... wall_follow"
+	@echo "... rviz_click_to_2d"
 	@echo "... random_walk"
 	@echo "... keyboard"
 	@echo "... f1tenth_simulator_genpy"
@@ -1177,6 +1220,9 @@ help:
 	@echo "... node/random_walk.o"
 	@echo "... node/random_walk.i"
 	@echo "... node/random_walk.s"
+	@echo "... node/rviz_click_to_2d.o"
+	@echo "... node/rviz_click_to_2d.i"
+	@echo "... node/rviz_click_to_2d.s"
 	@echo "... node/simulator.o"
 	@echo "... node/simulator.i"
 	@echo "... node/simulator.s"

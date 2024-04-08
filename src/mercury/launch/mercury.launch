@@ -15,7 +15,7 @@
   </include>
   
   
-  <include file="$(find velma_nav)/move_base.launch"/>
+  <include file="$(find mercury_nav)/move_base.launch"/>
   
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
       

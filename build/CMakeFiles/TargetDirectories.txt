@@ -248,6 +248,7 @@
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/edit_cache.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/test.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/wall_follow.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/random_walk.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/keyboard.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/f1tenth_simulator/CMakeFiles/f1tenth_simulator_genpy.dir
@@ -382,6 +383,13 @@
 /home/f1tenth/f1Tenth_UCSB_2024/build/navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/navigation/CMakeFiles/move_base_gencfg.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/install/strip.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/install/local.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/install.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/list_install_components.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/rebuild_cache.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/edit_cache.dir
+/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/CMakeFiles/test.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/CMakeFiles/install/strip.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/CMakeFiles/install/local.dir
 /home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/CMakeFiles/install.dir

@@ -1,0 +1,8 @@
+prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
+
+Name: navstack_pub
+Description: Description of navstack_pub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

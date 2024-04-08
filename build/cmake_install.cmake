@@ -150,6 +150,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_ackermann/cmake_install.cmake")
   include("/home/f1tenth/f1Tenth_UCSB_2024/build/vesc/vesc_driver/cmake_install.cmake")
   include("/home/f1tenth/f1Tenth_UCSB_2024/build/navigation/cmake_install.cmake")
+  include("/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub/cmake_install.cmake")
   include("/home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/cmake_install.cmake")
 
 endif()

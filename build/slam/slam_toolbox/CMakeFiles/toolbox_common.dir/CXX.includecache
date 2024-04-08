@@ -752,10 +752,6 @@ slam_toolbox/loop_closure_assistant.hpp
 slam_toolbox/map_saver.hpp
 /home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/src/slam_toolbox/map_saver.hpp
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/src/slam_mapper.cpp
-slam_toolbox/slam_mapper.hpp
-/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/src/slam_toolbox/slam_mapper.hpp
-
 /home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/src/slam_toolbox_common.cpp
 slam_toolbox/slam_toolbox_common.hpp
 /home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/src/slam_toolbox/slam_toolbox_common.hpp

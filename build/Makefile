@@ -1832,6 +1832,19 @@ wall_follow/fast:
 .PHONY : wall_follow/fast
 
 #=============================================================================
+# Target rules for targets named rviz_click_to_2d
+
+# Build rule for target.
+rviz_click_to_2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rviz_click_to_2d
+.PHONY : rviz_click_to_2d
+
+# fast build rule for target.
+rviz_click_to_2d/fast:
+	$(MAKE) -f f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build.make f1tenth_simulator/CMakeFiles/rviz_click_to_2d.dir/build
+.PHONY : rviz_click_to_2d/fast
+
+#=============================================================================
 # Target rules for targets named random_walk
 
 # Build rule for target.
@@ -3025,6 +3038,7 @@ help:
 	@echo "... rplidarNodeClient"
 	@echo "... rplidarNode"
 	@echo "... wall_follow"
+	@echo "... rviz_click_to_2d"
 	@echo "... random_walk"
 	@echo "... keyboard"
 	@echo "... f1tenth_simulator_genpy"

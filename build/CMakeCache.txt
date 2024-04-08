@@ -877,6 +877,12 @@ move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
 
+//Value Computed by CMake
+navstack_pub_BINARY_DIR:STATIC=/home/f1tenth/f1Tenth_UCSB_2024/build/jetson_nano_bot/navstack_pub
+
+//Value Computed by CMake
+navstack_pub_SOURCE_DIR:STATIC=/home/f1tenth/f1Tenth_UCSB_2024/src/jetson_nano_bot/navstack_pub
+
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
 
@@ -1261,7 +1267,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=26
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
