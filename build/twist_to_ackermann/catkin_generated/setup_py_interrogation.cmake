@@ -1,7 +1,0 @@
-set(twist_to_ackermann_SETUP_PY_SETUP_MODULE "distutils.core")
-set(twist_to_ackermann_SETUP_PY_VERSION "0.0.0")
-set(twist_to_ackermann_SETUP_PY_SCRIPTS "")
-set(twist_to_ackermann_SETUP_PY_PACKAGES "twist_to_ackermann")
-set(twist_to_ackermann_SETUP_PY_PACKAGE_DIRS "src/twist_to_ackermann")
-set(twist_to_ackermann_SETUP_PY_MODULES "")
-set(twist_to_ackermann_SETUP_PY_MODULE_DIRS "")

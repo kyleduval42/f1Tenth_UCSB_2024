@@ -1,8 +1,0 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/install
-
-Name: twist_to_ackermann
-Description: Description of twist_to_ackermann
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

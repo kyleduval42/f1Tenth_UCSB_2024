@@ -1,8 +1,0 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/install
-
-Name: sparse_bundle_adjustment
-Description: Description of sparse_bundle_adjustment
-Version: 0.4.4
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lsba
-Requires: 
