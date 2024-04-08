@@ -39,6 +39,7 @@ private:
     int nav_mux_idx;
     int brake_mux_idx;
     int wall_mux_idx;
+    int disparity_mux_idx;
     // ***Add mux index for new planner here***
     // int new_mux_idx;
 
@@ -53,6 +54,7 @@ private:
     int brake_button_idx;
     int nav_button_idx;
     int wall_button_idx;
+    int disparity_button_idx;
     // ***Add button index for new planner here***
     // int new_button_idx;
 
@@ -63,6 +65,7 @@ private:
     std::string random_walk_key_char;
     std::string nav_key_char;
     std::string wall_key_char;
+    std::string disparity_key_char;
     // ***Add key char for new planner here***
     // int new_key_char;
 
@@ -122,7 +125,8 @@ public:
         n.getParam("random_walker_mux_idx", random_walker_mux_idx);
         n.getParam("brake_mux_idx", brake_mux_idx);
         n.getParam("nav_mux_idx", nav_mux_idx);
-	n.getParam("wall_mux_idx", wall_mux_idx);
+	    n.getParam("wall_mux_idx", wall_mux_idx);
+        n.getParam("disparity_mux_idx",disparity_mux_idx);
         // ***Add mux index for new planner here***
         // n.getParam("new_mux_idx", new_mux_idx);
 
@@ -132,7 +136,8 @@ public:
         n.getParam("random_walk_button_idx", random_walk_button_idx);
         n.getParam("brake_button_idx", brake_button_idx);
         n.getParam("nav_button_idx", nav_button_idx);
-	n.getParam("wall_button_idx", wall_button_idx);
+	    n.getParam("wall_button_idx", wall_button_idx);
+        n.getParam("disparity_button_idx",disparity_button_idx);
         // ***Add button index for new planner here***
         // n.getParam("new_button_idx", new_button_idx);
 
@@ -142,7 +147,8 @@ public:
         n.getParam("random_walk_key_char", random_walk_key_char);
         n.getParam("brake_key_char", brake_key_char);
         n.getParam("nav_key_char", nav_key_char);
-	n.getParam("wall_key_char", wall_key_char);
+	    n.getParam("wall_key_char", wall_key_char);
+        n.getParam("disparity_key_char",disparity_key_char);
         // ***Add key char for new planner here***
         // n.getParam("new_key_char", new_key_char);
 
@@ -316,6 +322,7 @@ public:
         else if (msg.buttons[random_walk_button_idx]) { 
             // random walker
             toggle_mux(random_walker_mux_idx, "Random Walker");
+
         } else if (msg.buttons[nav_button_idx]) {
             // nav
             toggle_mux(nav_mux_idx, "Navigation");
@@ -323,6 +330,10 @@ public:
         } else if (msg.buttons[wall_mux_idx]) {
             // wall follow
             toggle_mux(wall_mux_idx, "Wall follow");
+
+        } else if (msg.buttons[disparity_mux_idx]) {
+            //disparity extender algorithm
+            toggle_mux(disparity_mux_idx, "Disparity Extender");
         }
         // ***Add new else if statement here for new planning method***
         // if (msg.buttons[new_button_idx]) {
@@ -353,13 +364,19 @@ public:
         } else if (msg.data == random_walk_key_char) {
             // random walker
             toggle_mux(random_walker_mux_idx, "Random Walker");
+
         } else if (msg.data == nav_key_char) {
             // nav
             toggle_mux(nav_mux_idx, "Navigation");
+
         } else if (msg.data == wall_key_char){
-	    // wall follow
-	    toggle_mux(wall_mux_idx, "Wall Follow");
-	}
+	        // wall follow
+	        toggle_mux(wall_mux_idx, "Wall Follow");
+
+	    } else if (msg.data == disparity_key_char){
+            //disparity extender algorithm
+            toggle_mux(disparity_mux_idx, "Disparity Extender");
+        }
         // ***Add new else if statement here for new planning method***
         // if (msg.data == new_key_char) {
         //  // new planner

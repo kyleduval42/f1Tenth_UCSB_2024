@@ -10,7 +10,7 @@
 // for RAND_MAX
 #include <cstdlib>
 
-class wallfollow {
+class disparity_extender {
 private:
     // A ROS node
     ros::NodeHandle n;
@@ -36,15 +36,15 @@ private:
     ackermann_msgs::AckermannDrive drive_msg;
 
 public:
-    wallfollow() {
+    disparity_extender() {
         // Initialize the node handle
         n = ros::NodeHandle("~");
 
         // get topic names
         std::string drive_topic, odom_topic, scan_topic;
-        n.getParam("wall_drive_topic", drive_topic);
+        n.getParam("disparity_drive", drive_topic);
         n.getParam("odom_topic", odom_topic);
-	n.getParam("scan_topic", scan_topic);
+	    n.getParam("scan_topic", scan_topic);
 
         // get car parameters
         n.getParam("max_speed", max_speed);
@@ -54,9 +54,9 @@ public:
         drive_pub = n.advertise<ackermann_msgs::AckermannDriveStamped>(drive_topic, 10);
 
         // Start a subscriber to listen to odom messages
-        //odom_sub = n.subscribe(odom_topic, 1, &wallfollow::odom_callback, this);
-        laser_sub = n.subscribe(scan_topic, 1, &wallfollow::scan_callback, this);
-	void scan_callback(const sensor_msgs::LaserScan & scan_msg);
+        //odom_sub = n.subscribe(odom_topic, 1, &disparity_extender::odom_callback, this);
+        laser_sub = n.subscribe(scan_topic, 1, &disparity_extender::scan_callback, this);
+	    void scan_callback(const sensor_msgs::LaserScan & scan_msg);
 
     }
 
@@ -102,14 +102,15 @@ public:
         //ROS_INFO("[ROBOT] Deriv: %f", derivative*Kd);
         //ROS_INFO("[ROBOT] E: %f", error);
         //ROS_INFO("[ROBOT] angle: %f", steering_angle);
+        std
     }
 };
 // end of class definition
 
 
 int main(int argc, char ** argv) {
-    ros::init(argc, argv, "wall_follow");
-    wallfollow wf;
+    ros::init(argc, argv, "disparity_extender");
+    disparity_extender de;
     ros::spin();
     return 0;
 }
