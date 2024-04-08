@@ -27,6 +27,11 @@
     <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
   </node>
   
+  <!-- Launch the Disparity Extender Node-->
+    <node pkg="f1tenth_simulator" name="disparity_extender" type="disparity_extender" output = "screen">
+    <rosparam command = "load" file = "$(find f1tenth_simulator)/params.yaml"/>
+    </node> 
+  
   <!-- navigation -->
   <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="convert.py" output="screen"/>
   

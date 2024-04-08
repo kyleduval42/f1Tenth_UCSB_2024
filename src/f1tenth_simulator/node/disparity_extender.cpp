@@ -42,7 +42,7 @@ public:
 
         // get topic names
         std::string drive_topic, odom_topic, scan_topic;
-        n.getParam("disparity_drive", drive_topic);
+        n.getParam("disparity_drive_topic", drive_topic);
         n.getParam("odom_topic", odom_topic);
 	    n.getParam("scan_topic", scan_topic);
 
@@ -102,7 +102,6 @@ public:
         //ROS_INFO("[ROBOT] Deriv: %f", derivative*Kd);
         //ROS_INFO("[ROBOT] E: %f", error);
         //ROS_INFO("[ROBOT] angle: %f", steering_angle);
-        std
     }
 };
 // end of class definition
