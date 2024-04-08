@@ -1,8 +1,0 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
-
-Name: mercury
-Description: Description of mercury
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
