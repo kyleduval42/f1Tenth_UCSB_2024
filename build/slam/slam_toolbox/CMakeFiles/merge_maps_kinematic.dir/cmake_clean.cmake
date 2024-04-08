@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/slam_toolbox/merge_maps_kinematic"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/slam_toolbox/merge_maps_kinematic.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/slam_toolbox/merge_maps_kinematic"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/slam_toolbox/merge_maps_kinematic.pdb"
   "CMakeFiles/merge_maps_kinematic.dir/src/merge_maps_kinematic.cpp.o"
 )
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,15 +42,15 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
 vesc_ackermann/ackermann_to_vesc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 cmath
 -
 sstream
@@ -58,11 +58,11 @@ sstream
 std_msgs/Float64.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
 ros/ros.h
 -
 vesc_ackermann/ackermann_to_vesc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

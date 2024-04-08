@@ -4,23 +4,23 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_socket.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/dataunpacker.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_capsules.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_async_transceiver.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidarprotocol_codec.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_serial_channel.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_tcp_channel.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_udp_channel.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/node.cpp" "/home/f1tenth/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/src/node.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_socket.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/dataunpacker.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_capsules.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_async_transceiver.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidarprotocol_codec.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_serial_channel.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_tcp_channel.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_udp_channel.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/node.cpp" "/home/kduval/f1Tenth_UCSB_2024/build/lidar/CMakeFiles/rplidarNode.dir/src/node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -33,8 +33,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/./sdk/include"
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/./sdk/src"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/./sdk/include"
+  "/home/kduval/f1Tenth_UCSB_2024/src/lidar/./sdk/src"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

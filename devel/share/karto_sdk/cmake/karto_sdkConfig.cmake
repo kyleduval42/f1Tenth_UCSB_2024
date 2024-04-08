@@ -67,14 +67,14 @@ set(karto_sdk_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(karto_sdk_SOURCE_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk)
-  set(karto_sdk_DEVEL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/devel)
+  set(karto_sdk_SOURCE_PREFIX /home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk)
+  set(karto_sdk_DEVEL_PREFIX /home/kduval/f1Tenth_UCSB_2024/devel)
   set(karto_sdk_INSTALL_PREFIX "")
   set(karto_sdk_PREFIX ${karto_sdk_DEVEL_PREFIX})
 else()
   set(karto_sdk_SOURCE_PREFIX "")
   set(karto_sdk_DEVEL_PREFIX "")
-  set(karto_sdk_INSTALL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/install)
+  set(karto_sdk_INSTALL_PREFIX /home/kduval/f1Tenth_UCSB_2024/install)
   set(karto_sdk_PREFIX ${karto_sdk_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(karto_sdk_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include;/usr/include " STREQUAL " ")
+if(NOT "/home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include;/usr/include " STREQUAL " ")
   set(karto_sdk_INCLUDE_DIRS "")
-  set(_include_dirs "/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include;/usr/include")
+  set(_include_dirs "/home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/incl
         message(FATAL_ERROR "Project 'karto_sdk' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'karto_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/f1tenth/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'karto_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/${idir}'.  ${_report}")
     endif()
     _list_append_unique(karto_sdk_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "kartoSlamToolbox;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;optimized;/usr/lib/aarch64-linux-gnu/libtbb.so;debug;/usr/lib/aarch64-linux-gnu/libtbb.so")
+set(libraries "kartoSlamToolbox;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;optimized;/usr/lib/x86_64-linux-gnu/libtbb.so;debug;/usr/lib/x86_64-linux-gnu/libtbb.so")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/kduval/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

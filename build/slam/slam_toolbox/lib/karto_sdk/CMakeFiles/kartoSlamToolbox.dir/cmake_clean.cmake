@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libkartoSlamToolbox.pdb"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libkartoSlamToolbox.so"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libkartoSlamToolbox.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libkartoSlamToolbox.so"
   "CMakeFiles/kartoSlamToolbox.dir/src/Karto.cpp.o"
   "CMakeFiles/kartoSlamToolbox.dir/src/Mapper.cpp.o"
 )

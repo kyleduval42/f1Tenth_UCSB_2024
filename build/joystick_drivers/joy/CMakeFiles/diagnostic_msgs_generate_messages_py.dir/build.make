@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
+CMAKE_SOURCE_DIR = /home/kduval/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
+CMAKE_BINARY_DIR = /home/kduval/f1Tenth_UCSB_2024/build
 
 # Utility rule file for diagnostic_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build: 
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/kduval/f1Tenth_UCSB_2024/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend:
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/joystick_drivers/joy /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy /home/f1tenth/f1Tenth_UCSB_2024/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kduval/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kduval/f1Tenth_UCSB_2024/src /home/kduval/f1Tenth_UCSB_2024/src/joystick_drivers/joy /home/kduval/f1Tenth_UCSB_2024/build /home/kduval/f1Tenth_UCSB_2024/build/joystick_drivers/joy /home/kduval/f1Tenth_UCSB_2024/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
 

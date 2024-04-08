@@ -1,4 +1,4 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/install
+prefix=/home/kduval/f1Tenth_UCSB_2024/install
 
 Name: sparse_bundle_adjustment
 Description: Description of sparse_bundle_adjustment

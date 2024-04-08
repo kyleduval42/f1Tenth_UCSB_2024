@@ -67,14 +67,14 @@ set(f1tenth_simulator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(f1tenth_simulator_SOURCE_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator)
-  set(f1tenth_simulator_DEVEL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/devel)
+  set(f1tenth_simulator_SOURCE_PREFIX /home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator)
+  set(f1tenth_simulator_DEVEL_PREFIX /home/kduval/f1Tenth_UCSB_2024/devel)
   set(f1tenth_simulator_INSTALL_PREFIX "")
   set(f1tenth_simulator_PREFIX ${f1tenth_simulator_DEVEL_PREFIX})
 else()
   set(f1tenth_simulator_SOURCE_PREFIX "")
   set(f1tenth_simulator_DEVEL_PREFIX "")
-  set(f1tenth_simulator_INSTALL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/install)
+  set(f1tenth_simulator_INSTALL_PREFIX /home/kduval/f1Tenth_UCSB_2024/install)
   set(f1tenth_simulator_PREFIX ${f1tenth_simulator_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(f1tenth_simulator_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include " STREQUAL " ")
+if(NOT "/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/include " STREQUAL " ")
   set(f1tenth_simulator_INCLUDE_DIRS "")
-  set(_include_dirs "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include")
+  set(_include_dirs "/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include " STREQUAL
         message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/${idir}'.  ${_report}")
     endif()
     _list_append_unique(f1tenth_simulator_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/kduval/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

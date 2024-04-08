@@ -6,49 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar.h
 vector
 -
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/hal/types.h
 rplidar_protocol.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
 rplidar_cmd.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_cmd.h
 rplidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_driver.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_cmd.h
 sl_lidar_cmd.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
 rplidar_protocol.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_driver.h
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rplidar_protocol.h
 sl_lidar_protocol.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/rptypes.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/rptypes.h
 stdint.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_crc.h
 sl_lidar_cmd.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar.h
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
 sl_lidar_protocol.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_driver.h
 vector
 -
 map
@@ -56,21 +56,21 @@ map
 string
 -
 sl_lidar_cmd.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_cmd.h
 string
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_lidar_protocol.h
 sl_types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_types.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/include/sl_types.h
 cstdint
 -
 stdint.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch_linux.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch_linux.h
 stdio.h
 -
 stdint.h
@@ -112,11 +112,11 @@ sys/select.h
 time.h
 -
 timer.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.cpp
 arch/linux/arch_linux.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
 stdio.h
 -
 stdlib.h
@@ -134,9 +134,9 @@ fcntl.h
 time.h
 -
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/types.h
 arch/linux/net_serial.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/net_serial.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/net_serial.h
 sys/select.h
 -
 algorithm
@@ -152,15 +152,15 @@ termios.h
 sys/ioctl.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_serial.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/abs_rxtx.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_socket.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/net_socket.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/sdkcommon.h
 ../../hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 sys/socket.h
 -
 netinet/in.h
@@ -180,9 +180,9 @@ linux/can.h
 linux/can/raw.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/thread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/thread.hpp
 arch/linux/arch_linux.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
 sched.h
 -
 sys/types.h
@@ -194,17 +194,17 @@ sys/time.h
 sys/resource.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.cpp
 arch/linux/arch_linux.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch/linux/arch_linux.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/timer.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/hal/types.h
 unistd.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch_macOS.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch_macOS.h
 stdio.h
 -
 stdint.h
@@ -244,19 +244,19 @@ sys/ioctl.h
 time.h
 -
 arch/macOS/timer.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch/macOS/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch/macOS/timer.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/thread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/thread.hpp
 arch/macOS/arch_macOS.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch/macOS/arch_macOS.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch/macOS/arch_macOS.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/timer.h
 rptypes.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/rptypes.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/rptypes.h
 unistd.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/arch_win32.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/arch_win32.h
 stddef.h
 -
 stdio.h
@@ -270,255 +270,255 @@ process.h
 direct.h
 -
 timer.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/timer.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/timer.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/timer.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/hal/types.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/winthread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/winthread.hpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/sdkcommon.h
 process.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sdkcommon.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/abs_rxtx.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/assert.h
 hal/locker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/locker.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/socket.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/event.h
 hal/waiter.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/waiter.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/waiter.h
 hal/byteorder.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/byteorder.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/hal/byteorder.h
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sl_lidar_driver.h
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/sl_crc.h
 algorithm
 -
 memory
 -
 dataupacker_namespace.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.cpp
 dataunnpacker_commondef.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
 dataunpacker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 dataunnpacker_internal.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
 map
 -
 unpacker/handler_capsules.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
 unpacker/handler_hqnode.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
 unpacker/handler_normalnode.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 dataupacker_namespace.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataupacker_namespace.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.cpp
 ../dataunnpacker_commondef.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
 ../dataunpacker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 ../dataunnpacker_internal.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
 handler_capsules.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_capsules.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp
 ../dataunnpacker_commondef.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
 ../dataunpacker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 ../dataunnpacker_internal.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/sl_crc.h
 handler_hqnode.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_hqnode.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp
 ../dataunnpacker_commondef.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_commondef.h
 ../dataunpacker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 ../dataunnpacker_internal.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunnpacker_internal.h
 handler_normalnode.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/unpacker/handler_normalnode.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/types.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 crtdbg.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteops.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteops.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
 hal/byteops.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/byteops.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/byteops.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 vector
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/sdkcommon.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/thread.h
 arch/win32/winthread.hpp
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/win32/winthread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/win32/winthread.hpp
 arch/macOS/thread.hpp
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/macOS/thread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/macOS/thread.hpp
 arch/linux/thread.hpp
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/linux/thread.hpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/arch/linux/thread.hpp
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/types.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 stdint.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/util.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/util.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/waiter.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/waiter.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/hal/event.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 hal/locker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
 rplidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar_driver.h
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
 algorithm
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
 arch/win32/arch_win32.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/arch_win32.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/win32/arch_win32.h
 arch/macOS/arch_macOS.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch_macOS.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/macOS/arch_macOS.h
 arch/linux/arch_linux.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch_linux.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/arch/linux/arch_linux.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 rplidar.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/rplidar.h
 hal/util.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/util.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/util.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 hal/locker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
 sl_async_transceiver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
 list
 -
 memory
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.cpp
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 hal/locker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
 hal/waiter.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/waiter.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/waiter.h
 hal/byteorder.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
 algorithm
 -
 memory
@@ -528,79 +528,79 @@ atomic
 deque
 -
 dataunpacker/dataunpacker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/dataunpacker/dataunpacker.h
 sl_async_transceiver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
 sl_lidarprotocol_codec.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.cpp
 sdkcommon.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sdkcommon.h
 hal/byteorder.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/byteorder.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/thread.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/thread.h
 hal/types.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/types.h
 hal/assert.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/assert.h
 hal/locker.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/locker.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 hal/event.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/event.h
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
 sl_crc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_crc.h
 algorithm
 -
 sl_async_transceiver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
 sl_lidarprotocol_codec.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidarprotocol_codec.h
 sl_async_transceiver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_async_transceiver.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_serial_channel.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_serial_channel.cpp
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_tcp_channel.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_tcp_channel.cpp
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_udp_channel.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_udp_channel.cpp
 sl_lidar_driver.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/sl_lidar_driver.h
 hal/abs_rxtx.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/abs_rxtx.h
 hal/socket.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/sdk/src/hal/socket.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/node.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/node.cpp
 ros/ros.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/ros/ros.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/sensor_msgs/LaserScan.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/sensor_msgs/LaserScan.h
 std_srvs/Empty.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/std_srvs/Empty.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/std_srvs/Empty.h
 sl_lidar.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/sl_lidar.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/sl_lidar.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

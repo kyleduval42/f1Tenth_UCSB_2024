@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/mux"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/mux.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/mux"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/mux.pdb"
   "CMakeFiles/mux.dir/node/mux.cpp.o"
 )
 

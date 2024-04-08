@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/manifest.l"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/manifest.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
   "CMakeFiles/vesc_msgs_generate_messages_eus"
 )
 

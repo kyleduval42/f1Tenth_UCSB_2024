@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNode"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNode.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNode"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNode.pdb"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"

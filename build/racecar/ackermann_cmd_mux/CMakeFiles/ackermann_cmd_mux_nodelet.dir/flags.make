@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DHAVE_NEW_YAMLCPP -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ackermann_cmd_mux\" -Dackermann_cmd_mux_nodelet_EXPORTS
 
-CXX_INCLUDES = -I/home/f1tenth/f1Tenth_UCSB_2024/devel/include -I/home/f1tenth/f1Tenth_UCSB_2024/src/racecar/ackermann_cmd_mux/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/kduval/f1Tenth_UCSB_2024/devel/include -I/home/kduval/f1Tenth_UCSB_2024/src/racecar/ackermann_cmd_mux/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

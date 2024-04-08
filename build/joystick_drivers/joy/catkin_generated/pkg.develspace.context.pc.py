@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;diagnostic_updater;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "joy"
-PROJECT_SPACE_DIR = "/home/f1tenth/f1Tenth_UCSB_2024/devel"
+PROJECT_SPACE_DIR = "/home/kduval/f1Tenth_UCSB_2024/devel"
 PROJECT_VERSION = "1.12.0"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/f1tenth/f1Tenth_UCSB_2024/src
+CMAKE_SOURCE_DIR = /home/kduval/f1Tenth_UCSB_2024/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/f1tenth/f1Tenth_UCSB_2024/build
+CMAKE_BINARY_DIR = /home/kduval/f1Tenth_UCSB_2024/build
 
 # Include any dependencies generated for this target.
 include serial/CMakeFiles/serial_example.dir/depend.make
@@ -58,17 +58,17 @@ include serial/CMakeFiles/serial_example.dir/progress.make
 include serial/CMakeFiles/serial_example.dir/flags.make
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: serial/CMakeFiles/serial_example.dir/flags.make
-serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
+serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kduval/f1Tenth_UCSB_2024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
+	cd /home/kduval/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_example.dir/examples/serial_example.cc.i"
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
+	cd /home/kduval/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_example.dir/examples/serial_example.cc.s"
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
+	cd /home/kduval/f1Tenth_UCSB_2024/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
 
 # Object files for target serial_example
 serial_example_OBJECTS = \
@@ -77,23 +77,23 @@ serial_example_OBJECTS = \
 # External object files for target serial_example
 serial_example_EXTERNAL_OBJECTS =
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
-/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
-/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: /home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libserial.so
-/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/f1tenth/f1Tenth_UCSB_2024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example"
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
+/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
+/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
+/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: /home/kduval/f1Tenth_UCSB_2024/devel/lib/libserial.so
+/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kduval/f1Tenth_UCSB_2024/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example"
+	cd /home/kduval/f1Tenth_UCSB_2024/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-serial/CMakeFiles/serial_example.dir/build: /home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial_example
+serial/CMakeFiles/serial_example.dir/build: /home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial_example
 
 .PHONY : serial/CMakeFiles/serial_example.dir/build
 
 serial/CMakeFiles/serial_example.dir/clean:
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
+	cd /home/kduval/f1Tenth_UCSB_2024/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
 .PHONY : serial/CMakeFiles/serial_example.dir/clean
 
 serial/CMakeFiles/serial_example.dir/depend:
-	cd /home/f1tenth/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/f1tenth/f1Tenth_UCSB_2024/src /home/f1tenth/f1Tenth_UCSB_2024/src/serial /home/f1tenth/f1Tenth_UCSB_2024/build /home/f1tenth/f1Tenth_UCSB_2024/build/serial /home/f1tenth/f1Tenth_UCSB_2024/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kduval/f1Tenth_UCSB_2024/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kduval/f1Tenth_UCSB_2024/src /home/kduval/f1Tenth_UCSB_2024/src/serial /home/kduval/f1Tenth_UCSB_2024/build /home/kduval/f1Tenth_UCSB_2024/build/serial /home/kduval/f1Tenth_UCSB_2024/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/CMakeFiles/serial_example.dir/depend
 

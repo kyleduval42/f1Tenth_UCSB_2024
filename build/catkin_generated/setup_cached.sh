@@ -7,8 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/opt/ros/noetic/lib'
-export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig'
-export PWD='/home/f1tenth/f1Tenth_UCSB_2024/build'
-export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
-export ROS_PACKAGE_PATH='/home/f1tenth/f1Tenth_UCSB_2024/src:/opt/ros/noetic/share'
+export CMAKE_PREFIX_PATH="/home/kduval/f1Tenth_UCSB_2024/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/kduval/f1Tenth_UCSB_2024/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/kduval/f1Tenth_UCSB_2024/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/kduval/f1Tenth_UCSB_2024/src:$ROS_PACKAGE_PATH"

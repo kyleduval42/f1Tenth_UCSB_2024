@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDrive.js"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDriveStamped.js"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDrive.js"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDriveStamped.js"
   "CMakeFiles/ackermann_msgs_generate_messages_nodejs"
 )
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/f1tenth/f1Tenth_UCSB_2024/src/waypoint_logger
+# Install script for directory: /home/kduval/f1Tenth_UCSB_2024/src/waypoint_logger
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/f1Tenth_UCSB_2024/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kduval/f1Tenth_UCSB_2024/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_logger.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_logger.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger/cmake" TYPE FILE FILES
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig.cmake"
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig-version.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/waypoint_logger/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/src/waypoint_logger/package.xml")
 endif()
 

@@ -1,8 +1,8 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
+prefix=/home/kduval/f1Tenth_UCSB_2024/devel
 
 Name: sparse_bundle_adjustment
 Description: Description of sparse_bundle_adjustment
 Version: 0.4.4
-Cflags: -I/home/f1tenth/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/include
+Cflags: -I/home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/include
 Libs: -L${prefix}/lib -lsba
 Requires: 

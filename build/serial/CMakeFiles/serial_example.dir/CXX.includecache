@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
+/home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial_example.cc
 string
 -
 iostream
@@ -18,9 +18,9 @@ windows.h
 unistd.h
 -
 serial/serial.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/serial/examples/serial/serial.h
+/home/kduval/f1Tenth_UCSB_2024/src/serial/examples/serial/serial.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/serial/include/serial/serial.h
+/home/kduval/f1Tenth_UCSB_2024/src/serial/include/serial/serial.h
 limits
 -
 vector
@@ -38,7 +38,7 @@ stdexcept
 serial/v8stdint.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/serial/include/serial/v8stdint.h
+/home/kduval/f1Tenth_UCSB_2024/src/serial/include/serial/v8stdint.h
 stddef.h
 -
 stdio.h

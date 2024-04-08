@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wextra -O3   -std=gnu++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"f1tenth_simulator\"
 
-CXX_INCLUDES = -I/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/include -I/home/f1tenth/f1Tenth_UCSB_2024/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/include -I/home/kduval/f1Tenth_UCSB_2024/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

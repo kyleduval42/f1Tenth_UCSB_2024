@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNodeClient"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNodeClient"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
   "CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
 )
 

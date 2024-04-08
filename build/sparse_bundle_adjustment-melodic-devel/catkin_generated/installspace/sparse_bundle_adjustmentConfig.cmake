@@ -67,14 +67,14 @@ set(sparse_bundle_adjustment_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(sparse_bundle_adjustment_SOURCE_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel)
-  set(sparse_bundle_adjustment_DEVEL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/devel)
+  set(sparse_bundle_adjustment_SOURCE_PREFIX /home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel)
+  set(sparse_bundle_adjustment_DEVEL_PREFIX /home/kduval/f1Tenth_UCSB_2024/devel)
   set(sparse_bundle_adjustment_INSTALL_PREFIX "")
   set(sparse_bundle_adjustment_PREFIX ${sparse_bundle_adjustment_DEVEL_PREFIX})
 else()
   set(sparse_bundle_adjustment_SOURCE_PREFIX "")
   set(sparse_bundle_adjustment_DEVEL_PREFIX "")
-  set(sparse_bundle_adjustment_INSTALL_PREFIX /home/f1tenth/f1Tenth_UCSB_2024/install)
+  set(sparse_bundle_adjustment_INSTALL_PREFIX /home/kduval/f1Tenth_UCSB_2024/install)
   set(sparse_bundle_adjustment_PREFIX ${sparse_bundle_adjustment_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/f1tenth/f1Tenth_UCSB_2024/install/lib;/home/f1tenth/f1Tenth_UCSB_2024/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/kduval/f1Tenth_UCSB_2024/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

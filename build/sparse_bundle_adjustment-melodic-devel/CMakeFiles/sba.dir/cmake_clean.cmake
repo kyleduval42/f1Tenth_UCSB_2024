@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libsba.pdb"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libsba.so"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libsba.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libsba.so"
   "CMakeFiles/sba.dir/src/csparse.cpp.o"
   "CMakeFiles/sba.dir/src/node.cpp.o"
   "CMakeFiles/sba.dir/src/proj.cpp.o"

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/f1tenth/f1Tenth_UCSB_2024/src/serial/include 
+CXX_INCLUDES = -I/home/kduval/f1Tenth_UCSB_2024/src/serial/include 
 

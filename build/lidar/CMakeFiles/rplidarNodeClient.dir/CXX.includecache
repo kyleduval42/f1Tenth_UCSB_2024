@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/client.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/client.cpp
 ros/ros.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/ros/ros.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/lidar/src/sensor_msgs/LaserScan.h
+/home/kduval/f1Tenth_UCSB_2024/src/lidar/src/sensor_msgs/LaserScan.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

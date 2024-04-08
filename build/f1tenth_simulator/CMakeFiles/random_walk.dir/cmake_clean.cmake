@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/random_walk"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/random_walk.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/random_walk"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/f1tenth_simulator/random_walk.pdb"
   "CMakeFiles/random_walk.dir/node/random_walk.cpp.o"
 )
 

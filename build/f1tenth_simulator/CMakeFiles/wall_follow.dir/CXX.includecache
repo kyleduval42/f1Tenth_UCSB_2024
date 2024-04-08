@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,7 +42,7 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/wall_follow.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/node/wall_follow.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h

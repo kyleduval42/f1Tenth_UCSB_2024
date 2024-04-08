@@ -1,8 +1,8 @@
-# Install script for directory: /home/f1tenth/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel
+# Install script for directory: /home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/f1Tenth_UCSB_2024/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kduval/f1Tenth_UCSB_2024/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,22 +38,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustment.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustment.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sparse_bundle_adjustment/cmake" TYPE FILE FILES
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustmentConfig.cmake"
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustmentConfig-version.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustmentConfig.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/sparse_bundle_adjustment-melodic-devel/catkin_generated/installspace/sparse_bundle_adjustmentConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sparse_bundle_adjustment" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sparse_bundle_adjustment" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/sparse_bundle_adjustment" TYPE DIRECTORY FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/include/sparse_bundle_adjustment/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/sparse_bundle_adjustment" TYPE DIRECTORY FILES "/home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/include/sparse_bundle_adjustment/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -63,7 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsba.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libsba.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libsba.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsba.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsba.so")
     if(CMAKE_INSTALL_DO_STRIP)

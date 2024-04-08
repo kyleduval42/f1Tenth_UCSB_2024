@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/serial/tests/unit/unix_timer_tests.cc" "/home/f1tenth/f1Tenth_UCSB_2024/build/serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
+  "/home/kduval/f1Tenth_UCSB_2024/src/serial/tests/unit/unix_timer_tests.cc" "/home/kduval/f1Tenth_UCSB_2024/build/serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,15 +15,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/f1tenth/f1Tenth_UCSB_2024/src/serial/include"
+  "/home/kduval/f1Tenth_UCSB_2024/src/serial/include"
   "/usr/src/googletest/googletest/include"
   "/usr/src/googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/f1tenth/f1Tenth_UCSB_2024/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/f1tenth/f1Tenth_UCSB_2024/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/kduval/f1Tenth_UCSB_2024/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/kduval/f1Tenth_UCSB_2024/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

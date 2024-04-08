@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libserial.pdb"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/libserial.so"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libserial.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/libserial.so"
   "CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
   "CMakeFiles/serial.dir/src/impl/unix.cc.o"
   "CMakeFiles/serial.dir/src/serial.cc.o"

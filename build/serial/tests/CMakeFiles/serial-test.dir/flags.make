@@ -6,5 +6,5 @@ CXX_FLAGS =   -DGTEST_HAS_PTHREAD=1
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/f1tenth/f1Tenth_UCSB_2024/src/serial/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
+CXX_INCLUDES = -I/home/kduval/f1Tenth_UCSB_2024/src/serial/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
 

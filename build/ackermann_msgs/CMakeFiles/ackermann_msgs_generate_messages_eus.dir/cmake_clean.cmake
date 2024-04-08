@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/manifest.l"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/manifest.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
   "CMakeFiles/ackermann_msgs_generate_messages_eus"
 )
 

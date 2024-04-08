@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial-test-timer"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/serial/serial-test-timer.pdb"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial-test-timer"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/serial/serial-test-timer.pdb"
   "CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
 )
 

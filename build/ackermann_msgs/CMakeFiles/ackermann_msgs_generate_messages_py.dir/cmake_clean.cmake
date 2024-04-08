@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/_AckermannDrive.py"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/_AckermannDriveStamped.py"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/__init__.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/_AckermannDrive.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/_AckermannDriveStamped.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/ackermann_msgs/msg/__init__.py"
   "CMakeFiles/ackermann_msgs_generate_messages_py"
 )
 

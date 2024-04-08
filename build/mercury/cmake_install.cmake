@@ -1,8 +1,8 @@
-# Install script for directory: /home/f1tenth/f1Tenth_UCSB_2024/src/mercury
+# Install script for directory: /home/kduval/f1Tenth_UCSB_2024/src/mercury
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/f1tenth/f1Tenth_UCSB_2024/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kduval/f1Tenth_UCSB_2024/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercury.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercury.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mercury/cmake" TYPE FILE FILES
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercuryConfig.cmake"
-    "/home/f1tenth/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercuryConfig-version.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercuryConfig.cmake"
+    "/home/kduval/f1Tenth_UCSB_2024/build/mercury/catkin_generated/installspace/mercuryConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mercury" TYPE FILE FILES "/home/f1tenth/f1Tenth_UCSB_2024/src/mercury/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mercury" TYPE FILE FILES "/home/kduval/f1Tenth_UCSB_2024/src/mercury/package.xml")
 endif()
 

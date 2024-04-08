@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
-  "/home/f1tenth/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
+  "/home/kduval/f1Tenth_UCSB_2024/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
   "CMakeFiles/vesc_msgs_generate_messages_py"
 )
 

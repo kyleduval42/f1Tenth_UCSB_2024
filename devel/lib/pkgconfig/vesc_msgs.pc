@@ -1,8 +1,8 @@
-prefix=/home/f1tenth/f1Tenth_UCSB_2024/devel
+prefix=/home/kduval/f1Tenth_UCSB_2024/devel
 
 Name: vesc_msgs
 Description: Description of vesc_msgs
 Version: 0.0.1
-Cflags: -I/home/f1tenth/f1Tenth_UCSB_2024/devel/include
+Cflags: -I/home/kduval/f1Tenth_UCSB_2024/devel/include
 Libs: -L${prefix}/lib 
 Requires: std_msgs message_runtime

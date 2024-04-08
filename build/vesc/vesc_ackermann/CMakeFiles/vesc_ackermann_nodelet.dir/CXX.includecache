@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,7 +42,7 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/vesc_msgs/VescState.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/vesc_msgs/VescState.h
 string
 -
 vector
@@ -58,7 +58,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/devel/include/vesc_msgs/VescStateStamped.h
+/home/kduval/f1Tenth_UCSB_2024/devel/include/vesc_msgs/VescStateStamped.h
 string
 -
 vector
@@ -78,13 +78,13 @@ std_msgs/Header.h
 vesc_msgs/VescState.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/vesc_to_odom.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/vesc_ackermann/vesc_to_odom.h
 ros/ros.h
 -
 vesc_msgs/VescStateStamped.h
@@ -96,9 +96,9 @@ boost/shared_ptr.hpp
 tf/transform_broadcaster.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
 vesc_ackermann/ackermann_to_vesc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 cmath
 -
 sstream
@@ -106,7 +106,7 @@ sstream
 std_msgs/Float64.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc_nodelet.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/ackermann_to_vesc_nodelet.cpp
 boost/shared_ptr.hpp
 -
 nodelet/nodelet.h
@@ -116,11 +116,11 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 vesc_ackermann/ackermann_to_vesc.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_to_odom.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_to_odom.cpp
 vesc_ackermann/vesc_to_odom.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
 cmath
 -
 nav_msgs/Odometry.h
@@ -128,7 +128,7 @@ nav_msgs/Odometry.h
 geometry_msgs/TransformStamped.h
 -
 
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_to_odom_nodelet.cpp
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_to_odom_nodelet.cpp
 boost/shared_ptr.hpp
 -
 nodelet/nodelet.h
@@ -138,7 +138,7 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 vesc_ackermann/vesc_to_odom.h
-/home/f1tenth/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
+/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp
