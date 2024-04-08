@@ -1,8 +1,0 @@
-prefix=/home/kduval/f1Tenth_UCSB_2024/devel
-
-Name: karto_sdk
-Description: Description of karto_sdk
-Version: 1.5.2
-Cflags: -I/home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/lib/karto_sdk/include -I/usr/include
-Libs: -L${prefix}/lib -lkartoSlamToolbox /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0 /usr/lib/x86_64-linux-gnu/libtbb.so
-Requires: 
