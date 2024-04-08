@@ -1,8 +1,0 @@
-prefix=/home/kduval/f1Tenth_UCSB_2024/install
-
-Name: mercury
-Description: Description of mercury
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

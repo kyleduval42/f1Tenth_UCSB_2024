@@ -1,8 +1,0 @@
-prefix=/home/kduval/f1Tenth_UCSB_2024/install
-
-Name: vesc_msgs
-Description: Description of vesc_msgs
-Version: 0.0.1
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: std_msgs message_runtime

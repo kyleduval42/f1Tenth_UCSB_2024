@@ -1,8 +1,0 @@
-prefix=/home/kduval/f1Tenth_UCSB_2024/install
-
-Name: f1tenth_simulator
-Description: Description of f1tenth_simulator
-Version: 0.0.1
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lf1tenth_simulator
-Requires: message_runtime
