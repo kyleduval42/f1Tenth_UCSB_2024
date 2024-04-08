@@ -33,5 +33,9 @@
   <!-- Launch the racecar model -->
     <include file="$(find f1tenth_simulator)/launch/racecar_model.launch"/>
 
-
+ <!-- Launch the Rviz click to 2d -->
+  <node pkg="f1tenth_simulator" name="rviz_click_to_2d" type="rviz_click_to_2d" output="screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+  
 </launch>

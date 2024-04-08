@@ -95,8 +95,8 @@ public:
   	drive_st_msg.drive = drive_msg;
   	drive_pub.publish(drive_st_msg);
 	//ROS_INFO("[ROBOT] Dist: %f", distance);
-	ROS_INFO("[ROBOT] 90: %f", a);
-	ROS_INFO("[ROBOT] 120: %f", b);
+	//ROS_INFO("[ROBOT] 90: %f", a);
+	//ROS_INFO("[ROBOT] 120: %f", b);
         //ROS_INFO("[ROBOT] Porp: %f", error*Kp);
         //ROS_INFO("[ROBOT] Integ: %f", integral*Ki);
         //ROS_INFO("[ROBOT] Deriv: %f", derivative*Kd);

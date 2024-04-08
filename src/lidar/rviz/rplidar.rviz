@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /RPLidarLaserScan1
+        - /RPLidarLaserScan1/Status1
         - /Map1
       Splitter Ratio: 0.5955334901809692
     Tree Height: 307
@@ -26,7 +27,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: RPLidarLaserScan
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -113,7 +114,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10.901809692382812
+      Distance: 19.21271514892578
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -129,9 +130,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4403960406780243
+      Pitch: 0.9403969049453735
       Target Frame: <Fixed Frame>
-      Yaw: 3.4867515563964844
+      Yaw: 2.9117588996887207
     Saved: ~
 Window Geometry:
   Displays:
@@ -149,5 +150,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 760
-  X: 40
-  Y: 27
+  X: 850
+  Y: 364
