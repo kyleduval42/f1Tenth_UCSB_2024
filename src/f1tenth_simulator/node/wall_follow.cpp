@@ -44,7 +44,7 @@ public:
         std::string drive_topic, odom_topic, scan_topic;
         n.getParam("wall_drive_topic", drive_topic);
         n.getParam("odom_topic", odom_topic);
-	n.getParam("scan_topic", scan_topic);
+	    n.getParam("scan_topic", scan_topic);
 
         // get car parameters
         n.getParam("max_speed", max_speed);

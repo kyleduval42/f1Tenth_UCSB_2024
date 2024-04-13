@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/kduval/f1Tenth_UCSB_2024/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/racecar/ackermann_cmd_mux/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/f1tenth_simulator/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/serial/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/slam/slam_toolbox/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/sparse_bundle_adjustment-melodic-devel/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_ackermann/include/**",
+        "/home/kduval/f1Tenth_UCSB_2024/src/vesc/vesc_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
