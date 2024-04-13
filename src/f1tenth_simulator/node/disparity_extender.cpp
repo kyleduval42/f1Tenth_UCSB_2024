@@ -69,7 +69,7 @@ public:
         laser_msg = scan_msg;
         std::vector<float> laser_ranges;
         laser_ranges = laser_msg.ranges;
-        size_t range_size = laser_ranges.size();
+       // size_t range_size = laser_ranges.size();
 
         
 	double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
@@ -78,8 +78,8 @@ public:
 	double second_angle_degree = 270;
 	double second_angle_radian = second_angle_degree * M_PI / 180.0;
 
-	double theta = second_angle_radian - first_angle_radian;       
-    	size_t first_index = static_cast<size_t>(first_angle_radian / angle_increment); //finds the starting and ending index for laser_ranges
+	//double theta = second_angle_radian - first_angle_radian;       
+    size_t first_index = static_cast<size_t>(first_angle_radian / angle_increment); //finds the starting and ending index for laser_ranges
 	size_t second_index = static_cast<size_t>(second_angle_radian / angle_increment);
 
 
@@ -88,7 +88,7 @@ public:
     size_t largest_disp_idx = -1;
     bool left;                 //keeps track of turning direction
 
-    for (int i = first_index; i <= second_index - 1; i++){ 
+    for (size_t i = first_index; i <= second_index - 1; i++){ 
         double curr = laser_ranges[i];
         double next = laser_ranges[i + 1];
 
@@ -108,7 +108,7 @@ public:
         }
     }
 
-    double correction = std::asin(wheelbase/wall_dist);     //how much should the car turn away from the disparity point
+    double correction = std::atan(wheelbase/wall_dist);     //how much should the car turn away from the disparity point
     double steering_angle_disp = (largest_disp_idx*angle_increment) - M_PI; //finds the steering angle toward the disparity point
     double steering_angle;
 
@@ -121,13 +121,13 @@ public:
 	prev_angle = steering_angle;
 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
-  	drive_msg.speed = 5.0;
+  	drive_msg.speed = 5.0; //change this for SPEED!!
   	drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
   	drive_pub.publish(drive_st_msg);
 
     //std::cout << boolalpha;
-    //std::cout << "correction angle: "<< correction << " Steering angle disp: " << steering_angle_disp << "final Steering angle" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
+    std::cout << "correction angle: "<< correction << " Steering angle disp: " << steering_angle_disp << "final Steering angle" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
 
 
 	//ROS_INFO("[ROBOT] Dist: %f", distance);
