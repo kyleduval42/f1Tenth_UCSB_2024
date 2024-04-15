@@ -8,7 +8,7 @@ width: 0.2032 # meters
 buffer_length: 5
 
 # Limits on the speed and steering angle
-max_speed: 7. #  meters/second
+max_speed: 10. #  meters/second
 max_steering_angle: 0.4189 # radians
 max_accel: 7.51 # meters/second^2
 max_decel: 8.26 # meters/second^2

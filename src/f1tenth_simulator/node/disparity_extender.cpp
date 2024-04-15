@@ -73,9 +73,9 @@ public:
 
         
 	double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
-	double first_angle_degree = 90;
+	double first_angle_degree = 110;
 	double first_angle_radian = first_angle_degree * M_PI / 180.0;
-	double second_angle_degree = 270;
+	double second_angle_degree = 250;
 	double second_angle_radian = second_angle_degree * M_PI / 180.0;
 
 	//double theta = second_angle_radian - first_angle_radian;       
@@ -118,16 +118,24 @@ public:
          steering_angle = steering_angle_disp + correction;
     }
 
-	prev_angle = steering_angle;
-
+	prev_angle = steering_angle; 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
-  	drive_msg.speed = 5.0; //change this for SPEED!!
-  	drive_msg.steering_angle = steering_angle;
+
+    /*
+    double a_param = 17;     //slope of speed formula
+    double b_param = 5.5;   //translation of speed formula
+    double x_angle = std::abs(steering_angle);
+  	drive_msg.speed = -a_param*(x_angle)*(x_angle)+ b_param;    // -b*(x)^2 + b
+    */
+
+    drive_msg.speed = 4; //safest constant speed
+    
+    drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
   	drive_pub.publish(drive_st_msg);
 
     //std::cout << boolalpha;
-    std::cout << "correction angle: "<< correction << " Steering angle disp: " << steering_angle_disp << "final Steering angle" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
+    std::cout << "Speed: " << drive_msg.speed << " Steering angle:" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
 
 
 	//ROS_INFO("[ROBOT] Dist: %f", distance);
