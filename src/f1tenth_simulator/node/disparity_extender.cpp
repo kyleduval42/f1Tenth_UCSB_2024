@@ -128,7 +128,7 @@ public:
   	drive_msg.speed = -a_param*(x_angle)*(x_angle)+ b_param;    // -b*(x)^2 + b
     */
 
-    drive_msg.speed = 4; //safest constant speed
+    drive_msg.speed = 1; //safest constant speed
     
     drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
