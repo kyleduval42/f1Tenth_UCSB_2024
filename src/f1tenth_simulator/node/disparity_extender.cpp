@@ -135,7 +135,7 @@ public:
   	drive_pub.publish(drive_st_msg);
 
     //std::cout << boolalpha;
-    std::cout << "Speed: " << drive_msg.speed << " Steering angle:" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
+    //std::cout << "Speed: " << drive_msg.speed << " Steering angle:" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
 
 
 	//ROS_INFO("[ROBOT] Dist: %f", distance);

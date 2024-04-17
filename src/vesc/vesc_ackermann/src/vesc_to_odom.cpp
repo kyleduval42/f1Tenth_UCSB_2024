@@ -15,7 +15,7 @@ inline bool getRequiredParam(const ros::NodeHandle& nh, std::string name, T& val
 
 VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
   odom_frame_("odom"), base_frame_("base_footprint"),
-  use_servo_cmd_(true), publish_tf_(true), x_(0.0), y_(0.0), yaw_(0.0)
+  use_servo_cmd_(true), publish_tf_(true), x_(0.0), y_(0.0), yaw_(3.14)
 {
   // get ROS parameters
   private_nh.param("odom_frame", odom_frame_, odom_frame_);

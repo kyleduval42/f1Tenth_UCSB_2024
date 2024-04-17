@@ -17,6 +17,9 @@
   
   <include file="$(find mercury_nav)/move_base.launch"/>
   
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
-      
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mercury)/launch/mercury.rviz" /> 
+          <!-- Launch RVIZ -->
+  <!--node pkg="rviz" type="rviz" name="rviz" args="-d $(find f1tenth_simulator)/launch/simulator.rviz" output="screen"/-->
+
+
 </launch>

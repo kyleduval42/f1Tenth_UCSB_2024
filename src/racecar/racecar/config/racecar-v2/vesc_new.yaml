@@ -17,13 +17,13 @@ steering_angle_to_servo_gain: -1.2135
 steering_angle_to_servo_offset: 0.5304
 
 # publish odom to base link tf
-vesc_to_odom/publish_tf: false
+vesc_to_odom/publish_tf: true
 
 # car wheelbase is about 25cm 
 wheelbase: .25
 
 vesc_driver:
-  port: /dev/ttyACM1
+  port: /dev/sensors/vesc
   duty_cycle_min: 0.0
   duty_cycle_max: 0.5
   current_min: 0.0
