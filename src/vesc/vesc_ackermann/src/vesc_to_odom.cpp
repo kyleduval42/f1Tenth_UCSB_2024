@@ -9,13 +9,14 @@
 
 namespace vesc_ackermann
 {
+bool offsetApplied = false;
 
 template <typename T>
 inline bool getRequiredParam(const ros::NodeHandle& nh, std::string name, T& value);
 
 VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
   odom_frame_("odom"), base_frame_("base_footprint"),
-  use_servo_cmd_(true), publish_tf_(true), x_(0.0), y_(0.0), yaw_(3.14)
+  use_servo_cmd_(true), publish_tf_(true), x_(0.0), y_(0.0), yaw_(0.0)
 {
   // get ROS parameters
   private_nh.param("odom_frame", odom_frame_, odom_frame_);
@@ -31,6 +32,7 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
       return;
     if (!getRequiredParam(nh, "steering_angle_to_servo_offset", steering_to_servo_offset_))
       return;
+    //speed_to_erpm_offset_ = 200;
     if (!getRequiredParam(nh, "wheelbase", wheelbase_))
       return;
   }
@@ -54,12 +56,14 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
 void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& state)
 {
   // check that we have a last servo command if we are depending on it for angular velocity
+  
+
   if (use_servo_cmd_ && !last_servo_cmd_) {
     return;
   }
 
   // convert to engineering units
-  double current_speed = -(state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
+  double current_speed =(state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
   double current_steering_angle(0.0), current_angular_velocity(0.0);
   if (std::fabs(current_speed) < 0.05){
     current_speed = 0.0;
@@ -80,12 +84,28 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   /** @todo could probably do better propigating odometry, e.g. trapezoidal integration */
 
   // propigate odometry
-  double x_dot = current_speed * cos(yaw_);
-  double y_dot = current_speed * sin(yaw_);
-  x_ += x_dot * dt.toSec();
-  y_ += y_dot * dt.toSec();
-  if (use_servo_cmd_)
-    yaw_ += current_angular_velocity * dt.toSec();
+double x_dot = current_speed;
+double y_dot = current_speed;
+  if (!offsetApplied) {
+    x_dot = x_dot * cos(yaw_ /*+ M_PI/2*/);
+    y_dot = y_dot * sin(yaw_ /*+ M_PI/2*/);    
+    }
+  else {
+    x_dot = x_dot * cos(yaw_);
+    y_dot = y_dot * sin(yaw_);       
+  }
+
+x_ += x_dot * dt.toSec();
+y_ += y_dot * dt.toSec();
+
+  //offset yaw_
+  if (use_servo_cmd_) {
+      if (!offsetApplied) {
+         //yaw_ += M_PI/2; // Add 180 degrees (π radians) as the offset
+         offsetApplied = true; // Set the flag to true to indicate that offset is applied
+      }
+      yaw_ += current_angular_velocity * dt.toSec(); // Update yaw angle with new value
+  }
 
   // save state for next time
   last_state_ = state;
@@ -101,8 +121,8 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   odom->pose.pose.position.y = y_;
   odom->pose.pose.orientation.x = 0.0;
   odom->pose.pose.orientation.y = 0.0;
-  odom->pose.pose.orientation.z = sin(yaw_/2.0);
-  odom->pose.pose.orientation.w = cos(yaw_/2.0);
+  odom->pose.pose.orientation.z = sin((yaw_ /*+ M_PI*/ )/2.0);
+  odom->pose.pose.orientation.w = cos((yaw_ /*+ M_PI*/ )/2.0);
 
   // Position uncertainty
   /** @todo Think about position uncertainty, perhaps get from parameters? */
