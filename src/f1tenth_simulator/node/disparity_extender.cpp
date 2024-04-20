@@ -73,9 +73,9 @@ public:
 
         
 	double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
-	double first_angle_degree = 110;
+	double first_angle_degree = 45;
 	double first_angle_radian = first_angle_degree * M_PI / 180.0;
-	double second_angle_degree = 250;
+	double second_angle_degree = 315;
 	double second_angle_radian = second_angle_degree * M_PI / 180.0;
 
 	//double theta = second_angle_radian - first_angle_radian;       
@@ -85,31 +85,47 @@ public:
 
     double largest_disp = -1;   //finds the index and value of the largest range disparity
     double wall_dist = -1;      //finds the distance to the inside turning wall
-    size_t largest_disp_idx = -1;
+    int largest_disp_idx = -1;
     bool left;                 //keeps track of turning direction
 
+    /*
+    for(size_t i = first_index; i <= second_index - 1;i++){ //rewrite infinites as the previous non infinite number
+        if (laser_ranges[i] == INFINITY){
+            size_t a = i;
+            while (laser_ranges[i] > 30 && a > 0)
+            {
+                a = a -1;
+                laser_ranges[i] = laser_ranges[a];
+            }
+            
+        }
+    }
+    */
+
+    int steering_angle_center_idx = (second_index - first_index); 
+
     for (size_t i = first_index; i <= second_index - 1; i++){ 
+
         double curr = laser_ranges[i];
         double next = laser_ranges[i + 1];
-
 
         if (std::abs((curr - next)) > largest_disp){  //checks if the disparity is the largest found
             largest_disp = std::abs(curr - next);     //writes the new largest disparitty
             largest_disp_idx = i;               //writes the new largest index
 
-            if (curr < next){
-                left = false;              //its a right turn!
-                wall_dist = curr; 
+            if (i <= steering_angle_center_idx){
+                left = true;              //its a LEFT turn! THESE WILL CHANGE PER SIM AND IRL
+                wall_dist = curr;         
             }  
-            if (curr > next){
-                left = true;               //its a left turn!
+            if (i > steering_angle_center_idx){
+                left = false;               //its a RIGHT turn!
                 wall_dist = next;
             }
         }
     }
 
     double correction = std::atan(wheelbase/wall_dist);     //how much should the car turn away from the disparity point
-    double steering_angle_disp = (largest_disp_idx*angle_increment) - M_PI; //finds the steering angle toward the disparity point
+    double steering_angle_disp = ((steering_angle_center_idx - largest_disp_idx)*angle_increment); //finds the steering angle toward the disparity point
     double steering_angle;
 
     if (left){
@@ -135,8 +151,15 @@ public:
   	drive_pub.publish(drive_st_msg);
 
     //std::cout << boolalpha;
-    //std::cout << "Speed: " << drive_msg.speed << " Steering angle:" << steering_angle << std::endl; //print statements for debugging REMOVE LATER
-
+    //std::cout << "LEFT?: "<<left<< " Steering angle:" << steering_angle_disp << "correction: " << correction <<std::endl; //print statements for debugging REMOVE LATER
+    
+    
+    
+    for (size_t j = first_index; j < second_index; j++){
+        std::cout << laser_ranges[j] << ", ";
+    }
+        std::cout << endl << "---SEPERATOR---" << endl;
+    
 
 	//ROS_INFO("[ROBOT] Dist: %f", distance);
 	//ROS_INFO("[ROBOT] 90: %f", a);
