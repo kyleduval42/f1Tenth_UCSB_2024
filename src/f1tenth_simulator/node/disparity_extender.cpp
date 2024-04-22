@@ -28,9 +28,9 @@ private:
 
 
     double prev_angle = 0.0;          //previous desired steering angle
-    int inf_max = 5;                  //maximum consecutive ignored infinites
-    double first_angle_degree = 90;   //starting measured angle
-    double second_angle_degree = 315; //ending measured angle
+    int inf_max = 12;                  //maximum consecutive ignored infinites
+    double first_angle_degree = 27;   //starting measured angle POSITVE!!!
+    double second_angle_degree = 90; //ending measured angle
     
 
 
@@ -85,18 +85,19 @@ public:
         bool left;                 //keeps track of turning direction
 
     
-        for(size_t i = first_index; i <= second_index - inf_max;i++){ //rewrite infinites as the previous non infinite number if less than inf_max consecutive infinties
+        for(size_t i = first_index + 1; i <= second_index - inf_max;i++){ //rewrite infinites as the previous non infinite number if less than inf_max consecutive infinties
             if (laser_ranges[i] == INFINITY){
-                 int count = 1;
+                int count = 1;
+
                 while (count < inf_max && laser_ranges[i + count] == INFINITY){ //while counting to inf_max until it hits a non infinte number
                     count++;
                 }
-                if (count <= inf_max){                                 //if there were under inf_max consecutive infinites
+
+                if (count < inf_max){                                 //if there were under inf_max consecutive infinites
                     for (int j = 0; j < count; j++){
-                        laser_ranges[i + j] = laser_ranges[i];         //write all of the infinites as the first indexed value
+                        laser_ranges[i + j] = laser_ranges[i - 1];         //write all of the infinites as the first indexed value
                     }
                 }
-
 
             }
         }
@@ -157,7 +158,7 @@ public:
     //std::cout << "Starting ind: " << first_index << "Ending ind: " << second_index << std::endl;
     
     
-    for (size_t j = first_index; j < second_index; j++){ //prints all measured lidar values
+    for (size_t j = 0; j < range_size; j++){ //prints all measured lidar values
         std::cout << laser_ranges[j] << ", ";
     }
         std::cout << endl << "---SEPERATOR---" << endl;
