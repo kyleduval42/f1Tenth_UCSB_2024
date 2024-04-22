@@ -29,11 +29,8 @@ private:
 
     double prev_angle = 0.0;          //previous desired steering angle
     int inf_max = 12;                  //maximum consecutive ignored infinites
-    double first_angle_degree = 27;   //starting measured angle POSITVE!!!
-    double second_angle_degree = 90; //ending measured angle
-    
-
-
+    double fov = 90;   //total fov POSITVE!!!
+   
     ackermann_msgs::AckermannDriveStamped drive_st_msg;
     ackermann_msgs::AckermannDrive drive_msg;
 
@@ -61,7 +58,6 @@ public:
         //odom_sub = n.subscribe(odom_topic, 1, &disparity_extender::odom_callback, this);
         laser_sub = n.subscribe(scan_topic, 1, &disparity_extender::scan_callback, this);
 	    void scan_callback(const sensor_msgs::LaserScan & scan_msg);
-
     }
 
     void scan_callback(const sensor_msgs::LaserScan & scan_msg){
@@ -70,32 +66,30 @@ public:
         std::vector<float> laser_ranges;
         laser_ranges = laser_msg.ranges;
         size_t range_size = laser_ranges.size();
-
+        std::vector<float> fov_range; 
         
-	    double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
-	    double first_angle_radian = first_angle_degree * M_PI / 180.0;
-	    double second_angle_radian = second_angle_degree * M_PI / 180.0;
-   
-        size_t first_index = static_cast<size_t>(first_angle_radian / angle_increment); //finds the starting and ending index for laser_ranges
-	    size_t second_index = static_cast<size_t>(second_angle_radian / angle_increment);
 
-        double largest_disp = -1;   //finds the index and value of the largest range disparity
-        double wall_dist = -1;      //finds the distance to the inside turning wall
-        int largest_disp_idx = -1;
-        bool left;                 //keeps track of turning direction
+	    double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
+	    double fov_rad = (fov) * M_PI / 180.0;
+	    int fov_idx = static_cast<int>(fov_rad / angle_increment); //indexing fov ranges from lidar
+
+        for (int i = 0; i < fov_idx; i++){  //construct usable lidar data
+            fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % range_size]);
+        }
+
 
     
-        for(size_t i = first_index + 1; i <= second_index - inf_max;i++){ //rewrite infinites as the previous non infinite number if less than inf_max consecutive infinties
-            if (laser_ranges[i] == INFINITY){
+        for(int i = 0 + 1; i <= fov_idx - inf_max;i++){ //rewrite infinites as the previous non infinite number if less than inf_max consecutive infinties
+            if (fov_range[i] == INFINITY){
                 int count = 1;
 
-                while (count < inf_max && laser_ranges[i + count] == INFINITY){ //while counting to inf_max until it hits a non infinte number
+                while (count < inf_max && fov_range[i + count] == INFINITY){ //while counting to inf_max until it hits a non infinte number
                     count++;
                 }
 
                 if (count < inf_max){                                 //if there were under inf_max consecutive infinites
                     for (int j = 0; j < count; j++){
-                        laser_ranges[i + j] = laser_ranges[i - 1];         //write all of the infinites as the first indexed value
+                        fov_range[i + j] = fov_range[i - 1];         //write all of the infinites as the first indexed value
                     }
                 }
 
@@ -103,25 +97,28 @@ public:
         }
 
     
-    int steering_angle_center_idx = (second_index - first_index); 
+        double largest_disp = -1;   //finds the index and value of the largest range disparity
+        double wall_dist = -1;      //finds the distance to the inside turning wall
+        int largest_disp_idx = -1;
+        bool left;                 //keeps track of turning direction
+        int steering_angle_center_idx = fov_idx/2;
     
-    for (size_t i = first_index; i <= second_index - 1; i++){ 
+    for (int i = 0; i <= fov_idx - 1; i++){ 
 
-        double curr = laser_ranges[i];
-        double next = laser_ranges[i + 1];
+        double curr = fov_range[i];
+        double next = fov_range[i + 1];
 
         if (std::abs((curr - next)) > largest_disp){  //checks if the disparity is the largest found
             largest_disp = std::abs(curr - next);     //writes the new largest disparitty
             largest_disp_idx = i;               //writes the new largest index
 
             if (i <= steering_angle_center_idx){
-                left = true;              //its a LEFT turn! THESE WILL CHANGE PER SIM AND IRL maybe
-                wall_dist = curr;         
+                left = false;              //its a right turn!
             }  
             if (i > steering_angle_center_idx){
-                left = false;               //its a RIGHT turn!
-                wall_dist = next;
+                left = true;               //its a left turn!
             }
+            wall_dist = std::min(curr,next);         
         }
     }
 
