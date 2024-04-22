@@ -28,8 +28,8 @@ private:
 
 
     double prev_angle = 0.0;          //previous desired steering angle
-    int inf_max = 12;                  //maximum consecutive ignored infinites
-    double fov = 90;   //total fov POSITVE!!!
+    int inf_max = 15;                  //maximum consecutive ignored infinites
+    double fov = 110;                    //total fov POSITVE!!!
    
     ackermann_msgs::AckermannDriveStamped drive_st_msg;
     ackermann_msgs::AckermannDrive drive_msg;
@@ -67,6 +67,7 @@ public:
         laser_ranges = laser_msg.ranges;
         size_t range_size = laser_ranges.size();
         std::vector<float> fov_range; 
+        double corr_dist = wheelbase*2;
         
 
 	    double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
@@ -122,8 +123,8 @@ public:
         }
     }
 
-    double correction = std::atan(wheelbase/wall_dist);     //how much should the car turn away from the disparity point
-    double steering_angle_disp = ((steering_angle_center_idx - largest_disp_idx)*angle_increment); //finds the steering angle toward the disparity point
+    double correction = std::atan(corr_dist/wall_dist);     //how much should the car turn away from the disparity point
+    double steering_angle_disp = (largest_disp_idx - steering_angle_center_idx )*angle_increment; //finds the steering angle toward the disparity point
     double steering_angle;
 
     if (left){
@@ -132,9 +133,14 @@ public:
          steering_angle = steering_angle_disp + correction;
     }
 
+    /*
+    if ((left && steering_angle < 0) || (!left && steering_angle > 0)){ //catch overturning
+        steering_angle = 0;
+    }
+
 	prev_angle = steering_angle; 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
-
+    */
     /*
     double a_param = 17;     //slope of speed formula
     double b_param = 5.5;   //translation of speed formula
@@ -151,15 +157,15 @@ public:
     //debugging print statements:
 
     std::cout << boolalpha;
-    //std::cout << "LEFT?: "<<left<< " Steering angle:" << steering_angle_disp << "correction: " << correction <<std::endl; 
+    std::cout << "LEFT?: "<<left<< " Steering angle:" << steering_angle_disp << "correction: " << correction <<std::endl; 
     //std::cout << "Starting ind: " << first_index << "Ending ind: " << second_index << std::endl;
     
-    
-    for (size_t j = 0; j < range_size; j++){ //prints all measured lidar values
-        std::cout << laser_ranges[j] << ", ";
+    /*
+    for (size_t j = 0; j < fov_idx; j++){ //prints all measured lidar values
+        std::cout << fov_range[j] << ", ";
     }
         std::cout << endl << "---SEPERATOR---" << endl;
-
+    */
     }
 };
 // end of class definition
