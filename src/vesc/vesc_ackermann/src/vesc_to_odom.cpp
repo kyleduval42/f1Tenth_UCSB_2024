@@ -63,7 +63,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   }
 
   // convert to engineering units
-  double current_speed =(state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
+  double current_speed = (state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
   double current_steering_angle(0.0), current_angular_velocity(0.0);
   if (std::fabs(current_speed) < 0.05){
     current_speed = 0.0;
@@ -121,7 +121,7 @@ y_ += y_dot * dt.toSec();
   odom->pose.pose.position.y = y_;
   odom->pose.pose.orientation.x = 0.0;
   odom->pose.pose.orientation.y = 0.0;
-  odom->pose.pose.orientation.z = sin((yaw_ /*+ M_PI*/ )/2.0);
+  odom->pose.pose.orientation.z = -sin((yaw_ /*+ M_PI*/ )/2.0)*sin((yaw_)/2);
   odom->pose.pose.orientation.w = cos((yaw_ /*+ M_PI*/ )/2.0);
 
   // Position uncertainty
