@@ -27,8 +27,7 @@ private:
     ros::Publisher drive_pub;
 
 
-    double prev_angle = 0.0;          //previous desired steering angle
-    int inf_max = 50;                  //maximum consecutive ignored infinites
+    double prev_angle = 0.0;          //previous desired steering angle   
     double fov = 150;                    //total fov POSITVE!!!
    
     ackermann_msgs::AckermannDriveStamped drive_st_msg;
@@ -68,46 +67,34 @@ public:
         size_t range_size = laser_ranges.size();
         std::vector<float> fov_range; 
         
-
 	    double angle_increment = laser_msg.angle_increment; //tells the Lidar the angle to scan
 	    double fov_rad = (fov) * M_PI / 180.0;
 	    int fov_idx = static_cast<int>(fov_rad / angle_increment); //indexing fov ranges from lidar
-
+        
         for (int i = 0; i < fov_idx; i++){  //construct usable lidar data
-            fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % range_size]);
+            fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % (range_size-1)]);
         }
+        size_t fov_range_size = fov_range.size();
 
+        //rewrite infinites as the previous non infinite number linearly scaling to the next
+        
+        for(int i = 0 + 1; i < fov_idx;i++){ 
+            if (fov_range[i] > 50 ){
+                int count = 0;
 
-    
-        for(int i = 0 + 1; i <= fov_idx - inf_max;i++){ //rewrite infinites as the previous non infinite number if less than inf_max consecutive infinties
-            if (fov_range[i] == INFINITY){
-                int count = 1;
-
-                while (count < inf_max && fov_range[i + count] == INFINITY){ //while counting to inf_max until it hits a non infinte number
+                while (fov_range[i + count] > 50 && i + count < fov_idx){ //while counting until it hits a non infinte number
                     count++;
                 }
-
-                if (count < inf_max){                                 //if there were under inf_max consecutive infinites
-                    for (int j = 0; j < count; j++){
-                        if (fov_range[i-1] < fov_range[i+count]) {
-                            fov_range[i + j] = fov_range[i-1]+(j+1)*((fov_range[i + count]-fov_range[i - 1])/count);
-                        } else if (fov_range[i-1] > fov_range[i+count]) {
-                            fov_range[i + j] = fov_range[i-1]-(j+1)*((fov_range[i - 1] - fov_range[i + count])/count);
-                        }
-                        
-                    }
+                for (int j = 0; j <= count; j++){        //linearly scales the infinites
+                    if (fov_range[i-1] < fov_range[i+count+1]) {
+                        fov_range[i + j] = fov_range[i-1]+(j+1)*((fov_range[i + count+1]-fov_range[i - 1])/(count+1));
+                    } else if (fov_range[i-1] > fov_range[i+count+1]) {
+                        fov_range[i + j] = fov_range[i-1]-(j+1)*((fov_range[i - 1] - fov_range[i + count + 1])/(count+1));
+                    }  
                 }
             }
         }
-
-        for (int i = fov_idx - inf_max; i < fov_idx; i++ ){ //overwrites infinites near the end
-            int count = 1;
-            while (fov_range[i] == INFINITY && i > 0){
-                fov_range[i] = fov_range[i - count];
-                count++;
-            }
-        }
-
+        
     
         double largest_disp = -1;   //finds the index and value of the largest range disparity
         double wall_dist = -1;      //finds the distance to the inside turning wall
@@ -131,32 +118,46 @@ public:
         }
     }
     
-    double curr_disp = fov_range[largest_disp_idx];
-    double next_disp = fov_range[largest_disp_idx+1];
     correction_idx = static_cast<int>(std::atan(wheelbase/wall_dist)/angle_increment);
+    int average_ind = 5; //Write average lookahead index
+    double left_avg = 0;    //sum of range data on left
+    double right_avg = 0;   //sum of range data on right
+   
+    int dir_idx = 0;
+    while (dir_idx < average_ind && largest_disp_idx + dir_idx < fov_idx){
+        left_avg = left_avg + fov_range[largest_disp_idx + dir_idx];
+        dir_idx++;
+    }
+    left_avg = left_avg / dir_idx;  //averages the data on the left side of the disparity
 
-    if (largest_disp_idx < steering_angle_center_idx){   //determine steering angle index
-        turn_idx = turn_idx + correction_idx;
-            while (fov_range[largest_disp_idx + 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) < fov_idx ){
+    dir_idx = 0;
+    while (dir_idx < average_ind && largest_disp_idx - dir_idx > 0){
+        right_avg = right_avg + fov_range[largest_disp_idx - dir_idx];
+        dir_idx++;
+    }
+    right_avg = right_avg / dir_idx; //averages the data on the right side of the disparity
+
+    
+    if (left_avg < right_avg){   // more gaps on the left
+        turn_idx = correction_idx;
+            while (fov_range[largest_disp_idx + 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) < fov_idx ){ //looks for additional gaps on the left
                 turn_idx++;
             }
-            left = false;
-              
-    if (largest_disp_idx > steering_angle_center_idx){
-        turn_idx = turn_idx - correction_idx;
-            while (fov_range[largest_disp_idx - 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) > 0 ){
+        left = false;
+    }      
+    if (left_avg > right_avg){
+        turn_idx = -correction_idx;
+            while (fov_range[largest_disp_idx - 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) > 0 ){ //looks for additional gaps on the right
                 turn_idx--;
-            }             
-        }
-                left = true;
+            }
+        left = true;             
     }
-
-    double steering_angle = (largest_disp_idx - steering_angle_center_idx + turn_idx)*angle_increment; //finds the steering angle toward the disparity point
-
+    
+    double steering_angle = (largest_disp_idx + turn_idx - steering_angle_center_idx)*angle_increment; //finds the steering angle toward the disparity point
 	prev_angle = steering_angle; 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
     
-    
+    /*
     if (fov_range[steering_angle_center_idx] > 4){  //speed control
         drive_msg.speed = 2;
     } else if (fov_range[steering_angle_center_idx] > 1.5){
@@ -164,9 +165,8 @@ public:
     } else {
         drive_msg.speed = 0.7;
     }
-    
-
-    //drive_msg.speed = 1; 
+    */
+    drive_msg.speed = 1;
     
     drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
@@ -177,9 +177,10 @@ public:
     std::cout << boolalpha;
     std::cout << "LEFT?: " << left << std::endl;
     std::cout << "Steering index: "<< largest_disp_idx << std::endl;
-    std::cout << "largest disparity: " << largest_disp << std::endl;
+    std::cout << "Correction_index: " << correction_idx << std::endl;
     std::cout << "Steering angle:" << steering_angle << std::endl;
-    std::cout << "Correction_index: " << correction_idx << std::endl; 
+    std::cout << "angle increment: " << angle_increment << std::endl;
+    std::cout << "largest disparity: " << largest_disp << std::endl; 
     std::cout << "Nearest wall: " << wall_dist << std::endl;
     std::cout << "Farthest wall: " << far_dist << std::endl;
     //std::cout <<"--SEPERATOR--" << std::endl;
@@ -189,7 +190,8 @@ public:
     for (int j = 0; j < fov_idx; j++){ //prints all measured lidar values
         std::cout << fov_range[j] << ", ";
     }
-        std::cout << endl << "---SEPERATOR---" << endl;
+    
+        std::cout << endl << "---END SEPERATOR---" << endl;
     
     }
 };
