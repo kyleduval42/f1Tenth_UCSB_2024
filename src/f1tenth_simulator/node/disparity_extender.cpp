@@ -265,7 +265,7 @@ public:
         drive_msg.speed = 1;
     }
     
-    drive_msg.speed = drive_msg.speed*0.5;
+    drive_msg.speed = drive_msg.speed;
     //drive_msg.speed = 1;
     
     drive_msg.steering_angle = steering_angle;
