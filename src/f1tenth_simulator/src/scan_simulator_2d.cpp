@@ -54,11 +54,13 @@ void ScanSimulator2D::scan(const Pose2D & pose, double * scan_data) {
   // Sweep through each beam
   for (int i = 0; i < num_beams; i++) {
     // Compute the distance to the nearest point
-    scan_data[i] = trace_ray(pose.x, pose.y, theta_index);
+    size_t diff = num_beams/2;
+    size_t idx = (i + diff)%(num_beams- 1); //change 180deg?
+    scan_data[idx] = trace_ray(pose.x, pose.y, theta_index);
 
     // Add Gaussian noise to the ray trace
     if (scan_std_dev > 0)
-        scan_data[i] += noise_dist(noise_generator);
+        scan_data[i] += noise_dist(noise_generator); //could also put infinites here?
 
     // Increment the scan
     theta_index += theta_index_increment;

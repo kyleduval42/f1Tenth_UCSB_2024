@@ -179,15 +179,16 @@ public:
     }
     right_avg = right_avg / dir_idx; //averages the data on the right side of the disparity
 
-     //Drives towards the furthest gap MAY CAUSE SWERVING
-    if (largest_disp_idx > fov_center_idx){   // more gaps on the left
+    
+    //Drives towards the furthest gap MAY CAUSE SWERVING
+    if (right_avg < left_avg){   // more gaps on the left
         turn_idx = correction_idx;
             while (fov_range[largest_disp_idx + 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) < fov_idx ){ //looks for additional gaps on the left
                 turn_idx++;
             }
         left = true;
     }      
-    if (largest_disp_idx < fov_center_idx){         //more gaps on the right
+    if (right_avg > left_avg){        //more gaps on the right
         turn_idx = -correction_idx;
             while (fov_range[largest_disp_idx - 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) > 0 ){ //looks for additional gaps on the right
                 turn_idx--;
@@ -199,7 +200,7 @@ public:
     //WRITE STEERING ANGLE 
     //but if there is an imminent obstacle in the turn direction, continue straight
     double steering_angle = (largest_disp_idx + turn_idx - steering_angle_center_idx)*angle_increment; //finds the steering angle toward the disparity point
-	
+	/*
     if (left){  //turning left wall
         int count_side = 0;
         for (size_t i = 0; i < left_range.size(); i++) {
@@ -223,16 +224,17 @@ public:
             steering_angle = 0;
         }
     }
-    
+    */
     //TURN CORRECTION
     //must recieve 2 consecutive direction change commands to parse turning
+    /*
     if (left != prev_left && !changedir){
         changedir = true;
         steering_angle = prev_angle;
     } else if (left == prev_left && changedir){
         changedir = false;
     }
-
+    */
     prev_angle = steering_angle;
     prev_left = left;
 
@@ -267,8 +269,11 @@ public:
     std::cout << "largest disparity: " << largest_disp << std::endl; 
     std::cout << "Nearest wall: " << wall_dist << std::endl;
     std::cout << "Farthest wall: " << far_dist << std::endl;
+    std::cout << "front: " << fov_range[steering_angle_center_idx] << std::endl;
     std::cout <<"--SEPERATOR--" << std::endl;
     //std::cout << "Starting ind: " << first_index << "Ending ind: " << second_index << std::endl;
+
+
     
     bool bad = false;
     for (int j = 0; j < fov_idx; j++){ //prints all measured lidar values

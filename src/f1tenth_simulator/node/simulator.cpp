@@ -358,11 +358,11 @@ public:
             // Compute the scan from the lidar
             std::vector<double> scan = scan_simulator.scan(scan_pose);
 
-            // Convert to float
+            // Convert to float AND BEARINGS
             std::vector<float> scan_(scan.size());
-            for (size_t i = 0; i < scan.size(); i++)
+            for (size_t i = 0; i < scan.size(); i++) {
                 scan_[i] = scan[i];
-
+            }
             // TTC Calculations are done here so the car can be halted in the simulator:
             // to reset TTC
             bool no_collision = true;
