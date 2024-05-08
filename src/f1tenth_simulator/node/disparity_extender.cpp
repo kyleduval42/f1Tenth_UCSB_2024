@@ -87,22 +87,22 @@ public:
         //INFINITE ERROR INTERPOLATION
         //rewrite infinites as the previous non infinite number linearly scaling to the next
         int index = 1;
-        while (laser_ranges[0] == INFINITY){ //rewrite the beginning if inifinite
+        while (laser_ranges[0] == INFINITY || std::isnan(laser_ranges[0])){ //rewrite the beginning if inifinite
             if (laser_ranges[index] < 50 && index < range_size){
                 laser_ranges[0] = laser_ranges[index];
             }
             index++;
         }
         index = 1;
-        while (laser_ranges[range_size-1] == INFINITY){ //rewrite the end if infinite
-            if (laser_ranges[(range_size -1 - index) < 50]){
+        while (laser_ranges[range_size-1] == INFINITY || std::isnan(laser_ranges[range_size-1])){ //rewrite the end if infinite
+            if (laser_ranges[(range_size -1 - index)] < 50 || !std::isnan(laser_ranges[(range_size -1 - index)])){
                 laser_ranges[range_size - 1] = laser_ranges[range_size - 1 - index];
             }
             index++;
         }
 
         for(int i = 1; i < range_size - 1;i++){ 
-            if (laser_ranges[i] == INFINITY ){
+            if (laser_ranges[i] == INFINITY || std::isnan(laser_ranges[i]) ){
                 int count = 1;
 
                 while ((laser_ranges[i + count] == INFINITY) &&((i + count) < range_size)){ //while counting until it hits a non infinte number
@@ -200,7 +200,7 @@ public:
     //WRITE STEERING ANGLE 
     //but if there is an imminent obstacle in the turn direction, continue straight
     double steering_angle = (largest_disp_idx + turn_idx - steering_angle_center_idx)*angle_increment; //finds the steering angle toward the disparity point
-	/*
+	
     if (left){  //turning left wall
         int count_side = 0;
         for (size_t i = 0; i < left_range.size(); i++) {
@@ -224,7 +224,7 @@ public:
             steering_angle = 0;
         }
     }
-    */
+    
     //TURN CORRECTION
     //must recieve 2 consecutive direction change commands to parse turning
     /*
@@ -250,7 +250,7 @@ public:
         drive_msg.speed = 1;
     }
     
-    drive_msg.speed = drive_msg.speed*1.5;
+    drive_msg.speed = drive_msg.speed*0.5;
     //drive_msg.speed = 1;
     
     drive_msg.steering_angle = steering_angle;
