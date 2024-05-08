@@ -62,6 +62,16 @@ void ScanSimulator2D::scan(const Pose2D & pose, double * scan_data) {
     if (scan_std_dev > 0)
         scan_data[i] += noise_dist(noise_generator); //could also put infinites here?
 
+    // periodically make infinite and nan
+    //srand(1000); //change the seed
+    int miss_dat = std::rand() % 100;
+    if (miss_dat < 20){
+        scan_data[i] = INFINITY;
+    } 
+    if (miss_dat < 5){
+        scan_data[i] = INFINITY;
+    }
+
     // Increment the scan
     theta_index += theta_index_increment;
     // Make sure it stays in the range [0, theta_discretization)

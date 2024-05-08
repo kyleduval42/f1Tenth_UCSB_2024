@@ -35,6 +35,8 @@ private:
     double side_fov = 60;           //fov angle for side control
     int average_ind = 5; //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 3;
+
+    bool debug = true; //TOGGLES DEBUG DATA
    
     ackermann_msgs::AckermannDriveStamped drive_st_msg;
     ackermann_msgs::AckermannDrive drive_msg;
@@ -83,47 +85,60 @@ public:
 	    int fov_idx = static_cast<int>(fov_rad / angle_increment); //indexing fov ranges from lidar
         double side_rad = (side_fov) * M_PI / 180.0;
 	    int side_idx = static_cast<int>(side_rad / angle_increment); //fpr indexing the side view lidar
+        //std::vector<float> laser_range_raw = laser_ranges; 
         
         //INFINITE ERROR INTERPOLATION
         //rewrite infinites as the previous non infinite number linearly scaling to the next
         int index = 1;
-        while (laser_ranges[0] == INFINITY || std::isnan(laser_ranges[0])){ //rewrite the beginning if inifinite
-            if (laser_ranges[index] < 50 && index < range_size){
+        while (laser_ranges[0] == INFINITY || std::isnan(laser_ranges[0] && index < range_size)){ //rewrite the beginning if inifinite
                 laser_ranges[0] = laser_ranges[index];
-            }
-            index++;
+                index++;
         }
+
         index = 1;
-        while (laser_ranges[range_size-1] == INFINITY || std::isnan(laser_ranges[range_size-1])){ //rewrite the end if infinite
-            if (laser_ranges[(range_size -1 - index)] < 50 || !std::isnan(laser_ranges[(range_size -1 - index)])){
+        while (laser_ranges[range_size - 1] == INFINITY || std::isnan(laser_ranges[range_size - 1]) && range_size - 1 - index >= 0){ //rewrite the end if infinite
                 laser_ranges[range_size - 1] = laser_ranges[range_size - 1 - index];
-            }
-            index++;
+                index++;
         }
+        std::vector<float> laser_range_raw = laser_ranges; 
 
         for(int i = 1; i < range_size - 1;i++){ 
             if (laser_ranges[i] == INFINITY || std::isnan(laser_ranges[i]) ){
                 int count = 1;
 
-                while ((laser_ranges[i + count] == INFINITY) &&((i + count) < range_size)){ //while counting until it hits a non infinte number
+                while (((laser_ranges[i + count] == INFINITY) || std::isnan(laser_ranges[i+count])) && ((i + count) < range_size)){ //while counting until it hits a non infinte number
                     count++;
                 }
                 for (int j = 0; j < count; j++){        //linearly scales the infinites
                     double diff = std::abs(laser_ranges[i + count]-laser_ranges[i - 1]);
-                    if (laser_ranges[i-1] < laser_ranges[i+count]) {
+                    if (laser_ranges[i-1] < laser_ranges[i + count]) {
                         laser_ranges[i + j] = laser_ranges[i-1]+((j+1)*(diff)/(count));
                     } else if (laser_ranges[i-1] > laser_ranges[i+count]) {
                         laser_ranges[i + j] = laser_ranges[i-1]-((j+1)*(diff)/(count));
-                    }  
+                    } 
                 }
+                
+            }
+
+            //2nd to last datapoint fix
+            if (laser_ranges[range_size -2] == INFINITY){
+                int count = -1;
+                laser_ranges[range_size - 2] = laser_ranges[range_size-1];
+
+                while(laser_ranges[range_size -2 + count] == INFINITY){
+                    laser_ranges[range_size -2 + count] = laser_ranges[range_size-1];
+                    count = count-1;
+                    
+                }
+                laser_ranges[range_size - 2] = laser_ranges[range_size-1];
+
             }
         }
 
         //CONTSTRUCT ARRAY OF USABLE DATA
         for (int i = 0; i < fov_idx; i++){  //construct usable lidar data in fov
-            fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % (range_size-1)]);
+            fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % (range_size)]);
         }
-        std::vector<float> fov_range_raw = fov_range; 
 
         for (int i = fov_idx/2; i < (fov_idx/2 + side_idx); i++){ //left side array writing
             left_range.push_back(laser_ranges[i]);
@@ -160,7 +175,7 @@ public:
     //CORRECTION ANGLE 
     //uses lidar data to determine the minimimum turn-away distance
     //also finds any larger gaps near the disparity
-    correction_idx = static_cast<int>(std::atan(wheelbase/wall_dist)/angle_increment);
+    correction_idx = static_cast<int>(std::atan((3/2)*wheelbase/wall_dist)/angle_increment);
     double left_avg = 0;    //sum of range data on left
     double right_avg = 0;   //sum of range data on right
     int fov_center_idx = fov_idx /2;
@@ -258,40 +273,39 @@ public:
   	drive_pub.publish(drive_st_msg);
 
     //debugging print statements:
-
-
-    std::cout << boolalpha;
-    std::cout << "LEFT?: " << left << std::endl;
-    std::cout << "disp_index: "<< largest_disp_idx << std::endl;
-    std::cout << "Correction_index: " << correction_idx << std::endl;
-    std::cout << "Steering angle:" << steering_angle << std::endl;
-    std::cout << "angle increment: " << angle_increment << std::endl;
-    std::cout << "largest disparity: " << largest_disp << std::endl; 
-    std::cout << "Nearest wall: " << wall_dist << std::endl;
-    std::cout << "Farthest wall: " << far_dist << std::endl;
-    std::cout << "front: " << fov_range[steering_angle_center_idx] << std::endl;
-    std::cout <<"--SEPERATOR--" << std::endl;
-    //std::cout << "Starting ind: " << first_index << "Ending ind: " << second_index << std::endl;
-
-
-    
-    bool bad = false;
-    for (int j = 0; j < fov_idx; j++){ //prints all measured lidar values
-        if (fov_range[j] > 50){
-            bad = true;
-        }
-    }
-    if(bad){
-        for (int j = 0; j < fov_idx; j++){
-            std::cout << fov_range[j] << ", ";
-        }
+    if (debug){
+        std::cout << boolalpha;
+        std::cout << "LEFT?: " << left << std::endl;
+        std::cout << "disp_index: "<< largest_disp_idx << std::endl;
+        std::cout << "Correction_index: " << correction_idx << std::endl;
+        std::cout << "Steering angle:" << steering_angle << std::endl;
+        std::cout << "angle increment: " << angle_increment << std::endl;
+        std::cout << "largest disparity: " << largest_disp << std::endl; 
+        std::cout << "Nearest wall: " << wall_dist << std::endl;
+        std::cout << "Farthest wall: " << far_dist << std::endl;
+        std::cout << "front: " << fov_range[steering_angle_center_idx] << std::endl;
         std::cout <<"--SEPERATOR--" << std::endl;
-        for (int j = 0; j < fov_idx; j++){
-            std::cout << fov_range_raw[j] << ", ";
+        std::cout << "Starting ind: " << laser_range_raw[range_size - 1] << " Ending ind: " << range_size << std::endl;
+
+
+    
+        bool bad = false;
+        for (int j = 0; j < fov_idx; j++){ //prints all measured lidar values
+            if (fov_range[j] == INFINITY){
+                bad = true;
+            }
+        }
+        if(bad){
+            for (int j = 0; j < fov_idx; j++){
+                std::cout << fov_range[j] << ", ";
+            }
+            std::cout << std::endl <<"--SEPERATOR--" << std::endl;
+            for (int j = 0; j < range_size; j++){
+            std::cout << laser_range_raw[j] << ", ";
         }
     }
-    
     std::cout << endl << "---END SEPERATOR---" << endl;
+    }
     }
 };
 // end of class definition
