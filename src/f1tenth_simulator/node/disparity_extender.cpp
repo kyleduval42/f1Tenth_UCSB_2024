@@ -31,7 +31,7 @@ private:
     bool changedir = false;
     bool prev_left = false;
 
-    double fov = 140;                    //total fov POSITVE!!!
+    double fov = 160;                    //total fov POSITVE!!!
     double side_fov = 70;           //fov angle for side control
     int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 1;
@@ -162,7 +162,7 @@ public:
     //CORRECTION ANGLE 
     //uses lidar data to determine the minimimum turn-away distance
     //also finds any larger gaps near the disparity
-    correction_idx = static_cast<int>(std::atan((wheelbase)/wall_dist)/angle_increment);
+    correction_idx = static_cast<int>(std::atan((wheelbase/2)/wall_dist)/angle_increment);
     double left_avg = 0;    //sum of range data on left
     double right_avg = 0;   //sum of range data on right
     //int fov_center_idx = fov_idx /2;
@@ -204,7 +204,7 @@ public:
     //WRITE STEERING ANGLE 
     //but if there is an imminent obstacle in the turn direction, continue straight
     double steering_angle = (largest_disp_idx + turn_idx - steering_angle_center_idx)*angle_increment; //finds the steering angle toward the disparity point
-	double side_clearance = wheelbase*(4/2);  //MAY NEED TO CHANGE THIS IF TRACK IS REALLY NARROW BUT IT MAY BREAK IT
+	double side_clearance = wheelbase;  //MAY NEED TO CHANGE THIS IF TRACK IS REALLY NARROW BUT IT MAY BREAK IT
     left = (steering_angle >= 0); //if left was wrong before it is fixed now
 
     if (left){  //turning left wall
@@ -233,6 +233,7 @@ public:
     
     //TURN CORRECTION
     //must recieve 2 consecutive direction change commands to parse turning
+    /*
     if (left != prev_left && !changedir){
         changedir = true;
         steering_angle = prev_angle;
@@ -242,7 +243,7 @@ public:
     
     prev_angle = steering_angle;
     prev_left = left;
-
+    */ 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
     
 
