@@ -55,22 +55,19 @@ void ScanSimulator2D::scan(const Pose2D & pose, double * scan_data) {
   for (int i = 0; i < num_beams; i++) {
     // Compute the distance to the nearest point
     size_t diff = num_beams/2;
-    size_t idx = (i + diff)%(num_beams- 1); //change 180deg?
+    size_t idx = (i + diff)%(num_beams); //change 180deg?
+
     scan_data[idx] = trace_ray(pose.x, pose.y, theta_index);
 
     // Add Gaussian noise to the ray trace
     if (scan_std_dev > 0)
-        scan_data[i] += noise_dist(noise_generator); //could also put infinites here?
+        scan_data[idx] += noise_dist(noise_generator); 
 
-    // periodically make infinite and nan
-    //srand(1000); //change the seed
+    // periodically make infinite
     int miss_dat = std::rand() % 100;
-    if (miss_dat < 20){
-        scan_data[i] = INFINITY;
+    if (miss_dat < 90){                                                         //CHANGE TO ALTER THE % OF DATA POINTS THAT WILL BE INFINITE
+        scan_data[idx] = INFINITY;
     } 
-    if (miss_dat < 5){
-        scan_data[i] = INFINITY;
-    }
 
     // Increment the scan
     theta_index += theta_index_increment;

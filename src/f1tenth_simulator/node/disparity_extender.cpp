@@ -31,10 +31,10 @@ private:
     bool changedir = false;
     bool prev_left = false;
 
-    double fov = 180;                    //total fov POSITVE!!!
-    double side_fov = 60;           //fov angle for side control
-    int average_ind = 5; //Write average lookahead index MAY NEED TO CHANGE
-    int straight_threshold = 3;
+    double fov = 140;                    //total fov POSITVE!!!
+    double side_fov = 70;           //fov angle for side control
+    int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
+    int straight_threshold = 1;
 
     bool debug = true; //TOGGLES DEBUG DATA
    
@@ -74,8 +74,8 @@ public:
         laser_msg = scan_msg;
         std::vector<float> laser_ranges;
         laser_ranges = laser_msg.ranges;
-        size_t range_size = laser_ranges.size();
-        range_size = static_cast<int>(range_size);
+        size_t range_size_sizet = laser_ranges.size();
+        int range_size = static_cast<int>(range_size_sizet);
         std::vector<float> fov_range; 
         std::vector<float> left_range;
         std::vector<float> right_range;
@@ -90,13 +90,13 @@ public:
         //INFINITE ERROR INTERPOLATION
         //rewrite infinites as the previous non infinite number linearly scaling to the next
         int index = 1;
-        while (laser_ranges[0] == INFINITY || std::isnan(laser_ranges[0] && index < range_size)){ //rewrite the beginning if inifinite
+        while ((laser_ranges[0] == INFINITY || std::isnan(laser_ranges[0])) && index < (range_size)){ //rewrite the beginning if inifinite
                 laser_ranges[0] = laser_ranges[index];
                 index++;
         }
 
         index = 1;
-        while (laser_ranges[range_size - 1] == INFINITY || std::isnan(laser_ranges[range_size - 1]) && range_size - 1 - index >= 0){ //rewrite the end if infinite
+        while ((laser_ranges[range_size - 1] == INFINITY || std::isnan(laser_ranges[range_size - 1])) && range_size - 1 - index >= 0){ //rewrite the end if infinite
                 laser_ranges[range_size - 1] = laser_ranges[range_size - 1 - index];
                 index++;
         }
@@ -110,28 +110,14 @@ public:
                     count++;
                 }
                 for (int j = 0; j < count; j++){        //linearly scales the infinites
-                    double diff = std::abs(laser_ranges[i + count]-laser_ranges[i - 1]);
+                    double diff = std::abs(laser_ranges[i + count] - laser_ranges[i - 1]);
                     if (laser_ranges[i-1] < laser_ranges[i + count]) {
                         laser_ranges[i + j] = laser_ranges[i-1]+((j+1)*(diff)/(count));
-                    } else if (laser_ranges[i-1] > laser_ranges[i+count]) {
+                    } else if (laser_ranges[i-1] >= laser_ranges[i+count]) {
                         laser_ranges[i + j] = laser_ranges[i-1]-((j+1)*(diff)/(count));
                     } 
                 }
                 
-            }
-
-            //2nd to last datapoint fix
-            if (laser_ranges[range_size -2] == INFINITY){
-                int count = -1;
-                laser_ranges[range_size - 2] = laser_ranges[range_size-1];
-
-                while(laser_ranges[range_size -2 + count] == INFINITY){
-                    laser_ranges[range_size -2 + count] = laser_ranges[range_size-1];
-                    count = count-1;
-                    
-                }
-                laser_ranges[range_size - 2] = laser_ranges[range_size-1];
-
             }
         }
 
@@ -140,10 +126,11 @@ public:
             fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % (range_size)]);
         }
 
-        for (int i = fov_idx/2; i < (fov_idx/2 + side_idx); i++){ //left side array writing
+        int side_start  = static_cast<int>((M_PI/2)*(6/9) / angle_increment);    //refers to starting side index
+        for (int i = side_start; i < (side_start + side_idx); i++){ //left side array writing
             left_range.push_back(laser_ranges[i]);
         } 
-        int right_start_idx = range_size - (fov_idx/2) - side_idx; 
+        int right_start_idx = range_size - side_start - side_idx; 
         for (int i = right_start_idx; i < (right_start_idx + side_idx);i++){    //right side array writing
             right_range.push_back(laser_ranges[i]);
         }
@@ -175,10 +162,10 @@ public:
     //CORRECTION ANGLE 
     //uses lidar data to determine the minimimum turn-away distance
     //also finds any larger gaps near the disparity
-    correction_idx = static_cast<int>(std::atan((3/2)*wheelbase/wall_dist)/angle_increment);
+    correction_idx = static_cast<int>(std::atan((wheelbase)/wall_dist)/angle_increment);
     double left_avg = 0;    //sum of range data on left
     double right_avg = 0;   //sum of range data on right
-    int fov_center_idx = fov_idx /2;
+    //int fov_center_idx = fov_idx /2;
 
     int dir_idx = 0;
     while (dir_idx < average_ind && largest_disp_idx + dir_idx < fov_idx){  
@@ -193,10 +180,12 @@ public:
         dir_idx++;
     }
     right_avg = right_avg / dir_idx; //averages the data on the right side of the disparity
-
-    
-    //Drives towards the furthest gap MAY CAUSE SWERVING
-    if (right_avg < left_avg){   // more gaps on the left
+    /*
+    right_avg < left_avg or largest_disp_idx > fov_center_idx //drives left
+    right_avg > left_avg or largest_disp_idx < fov_center_idx //drives right
+    */
+    //Drives towards the furthest gap 
+    if (right_avg < left_avg ){   // more gaps on the left
         turn_idx = correction_idx;
             while (fov_range[largest_disp_idx + 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) < fov_idx ){ //looks for additional gaps on the left
                 turn_idx++;
@@ -215,11 +204,13 @@ public:
     //WRITE STEERING ANGLE 
     //but if there is an imminent obstacle in the turn direction, continue straight
     double steering_angle = (largest_disp_idx + turn_idx - steering_angle_center_idx)*angle_increment; //finds the steering angle toward the disparity point
-	
+	double side_clearance = wheelbase*(4/2);  //MAY NEED TO CHANGE THIS IF TRACK IS REALLY NARROW BUT IT MAY BREAK IT
+    left = (steering_angle >= 0); //if left was wrong before it is fixed now
+
     if (left){  //turning left wall
         int count_side = 0;
         for (size_t i = 0; i < left_range.size(); i++) {
-            if (left_range[i] < wheelbase){
+            if (left_range[i] < side_clearance){
                 count_side++;
             }
         }
@@ -231,7 +222,7 @@ public:
     if (!left){ //turning right wall 
         int count_side = 0;
         for (size_t i = 0; i < right_range.size(); i++) {
-            if (right_range[i] < wheelbase){
+            if (right_range[i] < side_clearance){
                 count_side++;
             }
         }
@@ -242,30 +233,37 @@ public:
     
     //TURN CORRECTION
     //must recieve 2 consecutive direction change commands to parse turning
-    /*
     if (left != prev_left && !changedir){
         changedir = true;
         steering_angle = prev_angle;
     } else if (left == prev_left && changedir){
         changedir = false;
     }
-    */
+    
     prev_angle = steering_angle;
     prev_left = left;
 
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
     
-    
+
     //DRIVE SPEED CONTROLLER
-    if (fov_range[steering_angle_center_idx] > 4){  //speed control
-        drive_msg.speed = 2;
-    } else if (fov_range[steering_angle_center_idx] > 2){
-        drive_msg.speed = 0.5*fov_range[steering_angle_center_idx]; 
+    double center_avg = 0;
+    double center_count = 0;
+    for (int i = steering_angle_center_idx - average_ind/2; i < steering_angle_center_idx + average_ind/2; i++){
+        center_avg = center_avg + fov_range[i];
+        center_count++;
+    }
+    center_avg = center_avg / center_count;
+
+    if (center_avg > 5){  //speed control
+        drive_msg.speed = 2.5;
+    } else if (center_avg > 3){
+        drive_msg.speed = 0.5*center_avg; 
     } else {
         drive_msg.speed = 1;
     }
     
-    drive_msg.speed = drive_msg.speed*0.5;
+    drive_msg.speed = drive_msg.speed;
     //drive_msg.speed = 1;
     
     drive_msg.steering_angle = steering_angle;
@@ -279,13 +277,13 @@ public:
         std::cout << "disp_index: "<< largest_disp_idx << std::endl;
         std::cout << "Correction_index: " << correction_idx << std::endl;
         std::cout << "Steering angle:" << steering_angle << std::endl;
-        std::cout << "angle increment: " << angle_increment << std::endl;
+        std::cout << "Speed: " << drive_msg.speed << std::endl;
         std::cout << "largest disparity: " << largest_disp << std::endl; 
         std::cout << "Nearest wall: " << wall_dist << std::endl;
         std::cout << "Farthest wall: " << far_dist << std::endl;
-        std::cout << "front: " << fov_range[steering_angle_center_idx] << std::endl;
+        std::cout << "front: " << center_avg << std::endl;
         std::cout <<"--SEPERATOR--" << std::endl;
-        std::cout << "Starting ind: " << laser_range_raw[range_size - 1] << " Ending ind: " << range_size << std::endl;
+        //std::cout << "Starting ind: " << laser_range_raw[range_size - 1] << " Ending ind: " << range_size << std::endl;
 
 
     
