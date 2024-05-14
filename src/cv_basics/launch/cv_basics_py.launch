@@ -1,0 +1,20 @@
+<launch>
+  <node
+    pkg="cv_basics"
+    type="webcam_pub.py"
+    name="webcam_pub"
+    output="screen"
+  />
+  <node
+    pkg="cv_basics"
+    type="webcam_sub.py"
+    name="webcam_sub"
+    output="screen"
+  />  
+  <node
+    pkg="cv_basics"
+    type="basic_talker.py"
+    name="basic_talker"
+    output="screen"
+  />
+</launch>
