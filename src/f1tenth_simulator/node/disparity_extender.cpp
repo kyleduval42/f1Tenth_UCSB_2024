@@ -30,8 +30,10 @@ private:
     double prev_angle = 0.0;          //previous desired steering angle   
     bool changedir = false;
     bool prev_left = false;
+    double inf_percent_sum = 0;
+    double inf_percent_samp = 0;
 
-    double fov = 160;                    //total fov POSITVE!!!
+    double fov = 180;                    //total fov POSITVE!!!
     double side_fov = 70;           //fov angle for side control
     int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 1;
@@ -126,7 +128,7 @@ public:
             fov_range.push_back(laser_ranges[((range_size - (fov_idx/2)) + i) % (range_size)]);
         }
 
-        int side_start  = static_cast<int>((M_PI/2)*(6/9) / angle_increment);    //refers to starting side index
+        int side_start  = static_cast<int>((M_PI/2) / angle_increment);    //refers to starting side index
         for (int i = side_start; i < (side_start + side_idx); i++){ //left side array writing
             left_range.push_back(laser_ranges[i]);
         } 
@@ -162,7 +164,7 @@ public:
     //CORRECTION ANGLE 
     //uses lidar data to determine the minimimum turn-away distance
     //also finds any larger gaps near the disparity
-    correction_idx = static_cast<int>(std::atan((wheelbase/2)/wall_dist)/angle_increment);
+    correction_idx = static_cast<int>(std::atan((wheelbase*(2))/wall_dist)/angle_increment);
     double left_avg = 0;    //sum of range data on left
     double right_avg = 0;   //sum of range data on right
     //int fov_center_idx = fov_idx /2;
@@ -180,11 +182,13 @@ public:
         dir_idx++;
     }
     right_avg = right_avg / dir_idx; //averages the data on the right side of the disparity
+
     /*
     right_avg < left_avg or largest_disp_idx > fov_center_idx //drives left
     right_avg > left_avg or largest_disp_idx < fov_center_idx //drives right
     */
     //Drives towards the furthest gap 
+
     if (right_avg < left_avg ){   // more gaps on the left
         turn_idx = correction_idx;
             while (fov_range[largest_disp_idx + 1 + turn_idx] >= far_dist && (turn_idx + largest_disp_idx) < fov_idx ){ //looks for additional gaps on the left
@@ -216,6 +220,7 @@ public:
         }
         if (count_side > straight_threshold){
             steering_angle = 0;
+            std::cout << "DANGER" << std::endl;
         }
     }
 
@@ -228,6 +233,7 @@ public:
         }
         if (count_side > straight_threshold){
             steering_angle = 0;
+            std::cout << "DANGER" << std::endl;
         }
     }
     
@@ -240,10 +246,11 @@ public:
     } else if (left == prev_left && changedir){
         changedir = false;
     }
-    
+    */
     prev_angle = steering_angle;
     prev_left = left;
-    */ 
+     
+
     steering_angle = std::max(-max_steering_angle, std::min(max_steering_angle, steering_angle));
     
 
@@ -273,6 +280,35 @@ public:
 
     //debugging print statements:
     if (debug){
+        double inf_count = 0;
+        bool bad = false;
+
+            for (int j = 0; j < fov_idx; j++){ //checks if there are infinites
+                if (fov_range[j] == INFINITY){
+                    bad = true;
+                }
+            }
+
+            if (bad){           //prints fov if there are infinites
+                for (int j = 0; j < fov_idx; j++){
+                    std::cout << fov_range[j] << ", ";
+                }
+                 std::cout << std::endl <<"--SEPERATOR--" << std::endl;
+            }
+            for (int j = 0; j < range_size; j++){
+                    if (laser_range_raw[j] == INFINITY) inf_count++;
+                    if (bad) {
+                        std::cout << laser_range_raw[j] << ", ";
+                        std::cout << std::endl <<"--SEPERATOR--" << std::endl;
+                    }
+            }
+
+        double inf_perc = inf_count/range_size;
+        inf_percent_samp++;
+        inf_percent_sum = inf_percent_sum + inf_perc;
+
+
+
         std::cout << boolalpha;
         std::cout << "LEFT?: " << left << std::endl;
         std::cout << "disp_index: "<< largest_disp_idx << std::endl;
@@ -283,27 +319,10 @@ public:
         std::cout << "Nearest wall: " << wall_dist << std::endl;
         std::cout << "Farthest wall: " << far_dist << std::endl;
         std::cout << "front: " << center_avg << std::endl;
-        std::cout <<"--SEPERATOR--" << std::endl;
+        std::cout << "infinity percentage: " << inf_percent_sum / inf_percent_samp << std::endl;
         //std::cout << "Starting ind: " << laser_range_raw[range_size - 1] << " Ending ind: " << range_size << std::endl;
-
-
-    
-        bool bad = false;
-        for (int j = 0; j < fov_idx; j++){ //prints all measured lidar values
-            if (fov_range[j] == INFINITY){
-                bad = true;
-            }
-        }
-        if(bad){
-            for (int j = 0; j < fov_idx; j++){
-                std::cout << fov_range[j] << ", ";
-            }
-            std::cout << std::endl <<"--SEPERATOR--" << std::endl;
-            for (int j = 0; j < range_size; j++){
-            std::cout << laser_range_raw[j] << ", ";
-        }
-    }
-    std::cout << endl << "---END SEPERATOR---" << endl;
+       
+        std::cout << endl << "---END SEPERATOR---" << endl;
     }
     }
 };

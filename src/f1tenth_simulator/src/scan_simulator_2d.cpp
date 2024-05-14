@@ -65,7 +65,7 @@ void ScanSimulator2D::scan(const Pose2D & pose, double * scan_data) {
 
     // periodically make infinite
     int miss_dat = std::rand() % 100;
-    if (miss_dat < 90){                                                         //CHANGE TO ALTER THE % OF DATA POINTS THAT WILL BE INFINITE
+    if (miss_dat < 10){                                                         //CHANGE TO ALTER THE % OF DATA POINTS THAT WILL BE INFINITE
         scan_data[idx] = INFINITY;
     } 
 
