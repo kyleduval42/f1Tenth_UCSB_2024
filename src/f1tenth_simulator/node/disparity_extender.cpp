@@ -33,7 +33,7 @@ private:
     double inf_percent_sum = 0;
     double inf_percent_samp = 0;
 
-    double fov = 180;                    //total fov POSITVE!!!
+    double fov = 160;                    //total fov POSITVE!!!
     double side_fov = 70;           //fov angle for side control
     int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 1;
@@ -146,7 +146,7 @@ public:
     int steering_angle_center_idx = fov_idx/2;
     int turn_idx = 0;
     int correction_idx;
-    bool left = false;
+    bool left;
     
     for (int i = 1; i < (fov_idx - 1); i++){ 
 
@@ -263,16 +263,30 @@ public:
     }
     center_avg = center_avg / center_count;
 
+    int sign = 1;
+    if (steering_angle<0){
+        sign =-1;
+    }
+
+
     if (center_avg > 5){  //speed control
         drive_msg.speed = 2.5;
+        steering_angle = steering_angle/3;
+
     } else if (center_avg > 3){
-        drive_msg.speed = 0.5*center_avg; 
-    } else {
-        drive_msg.speed = 1;
+        drive_msg.speed = 1.75; 
+
+    } else if (center_avg >0.5 ){
+        drive_msg.speed = 1.25;
+
+    }
+    else{
+        drive_msg.speed = -1.25;
+        steering_angle = -steering_angle;
     }
     
     drive_msg.speed = drive_msg.speed;
-    //drive_msg.speed = 1;
+    //drive_msg.speed = 0.25;
     
     drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
@@ -312,6 +326,7 @@ public:
         std::cout << boolalpha;
         std::cout << "LEFT?: " << left << std::endl;
         std::cout << "disp_index: "<< largest_disp_idx << std::endl;
+        
         std::cout << "Correction_index: " << correction_idx << std::endl;
         std::cout << "Steering angle:" << steering_angle << std::endl;
         std::cout << "Speed: " << drive_msg.speed << std::endl;

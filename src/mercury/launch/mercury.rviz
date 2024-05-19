@@ -27,7 +27,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -161,9 +161,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7747969031333923
+      Pitch: 0.7697969079017639
       Target Frame: <Fixed Frame>
-      Yaw: 2.838574171066284
+      Yaw: 2.858574390411377
     Saved: ~
 Window Geometry:
   Displays:
@@ -181,5 +181,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1048
-  X: 40
-  Y: 27
+  X: 326
+  Y: 56
