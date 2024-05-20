@@ -228,11 +228,11 @@ public:
                 desired_velocity = -keyboard_speed;
             } else if (msg.data == "a") {
                 // Steer left and keep speed
-                desired_steer = 0.25;
+                desired_steer = 2.25;
                 desired_velocity = prev_key_velocity;
             } else if (msg.data == "d") {
                 // Steer right and keep speed
-                desired_steer = -0.25;
+                desired_steer = -2.25;
                 desired_velocity = prev_key_velocity;
             } else if (msg.data == " ") {
                 // publish zeros to slow down/straighten out car

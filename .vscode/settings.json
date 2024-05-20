@@ -65,5 +65,6 @@
         "cfenv": "cpp",
         "typeindex": "cpp",
         "variant": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/home/f1tenth/f1Tenth_UCSB_2024/src/jetson_nano_bot/navstack_pub"
 }

@@ -33,7 +33,7 @@ private:
     double inf_percent_sum = 0;
     double inf_percent_samp = 0;
 
-    double fov = 160;                    //total fov POSITVE!!!
+    double fov = 180;                    //total fov POSITVE!!!
     double side_fov = 70;           //fov angle for side control
     int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 1;
@@ -164,7 +164,7 @@ public:
     //CORRECTION ANGLE 
     //uses lidar data to determine the minimimum turn-away distance
     //also finds any larger gaps near the disparity
-    correction_idx = static_cast<int>(std::atan((wheelbase*(2))/wall_dist)/angle_increment);
+    correction_idx = static_cast<int>(std::atan(((wheelbase)*(3/2))/wall_dist)/angle_increment);
     double left_avg = 0;    //sum of range data on left
     double right_avg = 0;   //sum of range data on right
     //int fov_center_idx = fov_idx /2;
@@ -270,11 +270,12 @@ public:
 
 
     if (center_avg > 5){  //speed control
-        drive_msg.speed = 2.5;
-        steering_angle = steering_angle/3;
+        drive_msg.speed = 4.5;
+        steering_angle = steering_angle/5;
 
     } else if (center_avg > 3){
-        drive_msg.speed = 1.75; 
+        drive_msg.speed = 2.5; 
+        steering_angle = steering_angle/2.5;
 
     } else if (center_avg >0.5 ){
         drive_msg.speed = 1.25;
@@ -285,8 +286,8 @@ public:
         steering_angle = -steering_angle;
     }
     
-    drive_msg.speed = drive_msg.speed;
-    //drive_msg.speed = 0.25;
+    drive_msg.speed =1*drive_msg.speed;
+    //drive_msg.speed =-/5 0.25;
     
     drive_msg.steering_angle = steering_angle;
   	drive_st_msg.drive = drive_msg;
