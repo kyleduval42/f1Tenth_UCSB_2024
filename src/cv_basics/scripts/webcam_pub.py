@@ -14,27 +14,29 @@ from nav_msgs.msg import OccupancyGrid
 from PIL import Image as PILImage
 import numpy as np
 from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Int32
+import math
 
 # Global variable to store previously sorted corners
 prev_sorted_corners = None
+prev_lap = 1;
+lap_counter = 0;
 
-def sort_corners(corners):
+
+def sort_corners(corners, threshold_distance=1000):
     global prev_sorted_corners
 
-    # If previous sorted corners exist, use them as the starting point
     if prev_sorted_corners is not None:
         sorted_corners = prev_sorted_corners.copy()
-        prev_sorted_corners = None  # Reset previous sorted corners
+        prev_sorted_corners = None
     else:
         sorted_corners = []
 
-    # Sort corners based on proximity
     while len(corners) > 0:
         if len(sorted_corners) == 0:
             sorted_corners.append(corners[0])
             del corners[0]
         else:
-            # Find the nearest corner to the last sorted corner
             last_corner = sorted_corners[-1]
             min_dist = float('inf')
             min_idx = None
@@ -43,8 +45,15 @@ def sort_corners(corners):
                 if dist < min_dist:
                     min_dist = dist
                     min_idx = idx
-            sorted_corners.append(corners[min_idx])
-            del corners[min_idx]
+            
+            if min_dist < threshold_distance:
+                sorted_corners.append(corners[min_idx])
+                del corners[min_idx]
+            else:
+                del corners[min_idx]
+
+    if np.linalg.norm(np.array(sorted_corners[-1]) - np.array(sorted_corners[0])) > threshold_distance:
+        del sorted_corners[-1]
 
     return sorted_corners
 
@@ -75,13 +84,22 @@ def angle_between_points(array):
         cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
         angle = np.arccos(np.clip(cosine_angle, -1, 1))
         
-        angles[i] = 180 - np.degrees(angle)
+        angles[i] = math.pi - angle
     return angles
 
+def lap_count_callback(data):
+    global lap_counter
+    lap_counter = data.data
 
 def map_callback(data):
-    global prev_sorted_corners
-
+    global prev_sorted_corners, lap_counter, prev_lap
+    
+    if lap_counter == prev_lap:
+    	print('lap_counter and prev_lap are the same')
+    	return
+    
+    prev_lap = lap_counter
+    
     # Extract map data
     width = data.info.width
     height = data.info.height
@@ -98,7 +116,21 @@ def map_callback(data):
     img_data[map_data == 100] = 0    # Occupied space (set to black)
 
     # Apply thinning operation for skeletonization
-    dst_image = cv2.ximgproc.thinning(img_data)
+    kernel = np.ones((3,3), np.uint8)
+
+    # Apply morphological opening (erosion followed by dilation)
+    opened_image = cv2.morphologyEx(img_data, cv2.MORPH_OPEN, kernel)
+
+    # Apply morphological closing (dilation followed by erosion)
+    smoothed_image = cv2.morphologyEx(opened_image, cv2.MORPH_CLOSE, kernel)
+    
+    bilat_img = cv2.bilateralFilter(smoothed_image, d=9, sigmaColor=75, sigmaSpace=75)
+
+    blurred_image = cv2.GaussianBlur(bilat_img, (5, 5), 0)
+
+    dst_image = cv2.ximgproc.thinning(blurred_image)
+    thinning_img = PILImage.fromarray(dst_image)
+    thinning_img.save('/home/vboxuser/testing/src/cv_basics/scripts/thinning.png')
 
     # Dilation operation to expand the lines
     kernel = np.ones((1,1), np.uint8)
@@ -109,25 +141,30 @@ def map_callback(data):
 
     # Convert coordinates to integers
     corners = np.int0(corners)
+    
+    # Sort corners based on proximity
+    sorted_corners = sort_corners(corners.tolist())
+    sorted_corners_array = np.array(sorted_corners).reshape(-1, 1, 2)
+    
+    print("Length of corners:", len(corners))
 
+    print("Length of sorted_corners:", len(sorted_corners_array))
 
     # Create a color image
     color_img = cv2.cvtColor(dst_image, cv2.COLOR_GRAY2BGR)
 
-    # Draw corners on the image
-    for corner in corners:
+    sorted_corners_array = np.array(sorted_corners).reshape(-1, 1, 2)
+    
+    for corner in sorted_corners_array:
         x, y = corner.ravel()
-        cv2.circle(color_img, (x, y), 3, (0, 0, 255), -1)
+        cv2.circle(blurred_image, (x, y), 3, (0, 0, 255), -1)
 
     # Convert OpenCV image to PIL image
-    harris_img = PILImage.fromarray(color_img)
+    harris_img = PILImage.fromarray(blurred_image)
 
     # Save detected corners image
-    harris_img.save('/home/hero1xxx/testing/src/cv_basics/scripts/good_features_detected.png')
+    harris_img.save('/home/vboxuser/testing/src/cv_basics/scripts/good_features_detected.png')
     
-    # Sort corners based on proximity
-    sorted_corners = sort_corners(corners.tolist())
-
     # Store the sorted corners for future use
     prev_sorted_corners = sorted_corners
 
@@ -167,8 +204,8 @@ def publish_transformed_coordinates(x_coordinates, y_coordinates,angles):
 def main():
     rospy.init_node('map_to_image_node', anonymous=True)
     rospy.Subscriber("/map", OccupancyGrid, map_callback)
+    rospy.Subscriber("lap_count", Int32, lap_count_callback)
     rospy.spin()
 
 if __name__ == '__main__':
     main()
-

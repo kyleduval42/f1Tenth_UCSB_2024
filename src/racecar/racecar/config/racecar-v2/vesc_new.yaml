@@ -20,7 +20,7 @@ steering_angle_to_servo_offset: 0.61
 vesc_to_odom/publish_tf: true
 
 # car wheelbase is about 25cm 
-wheelbase: .25
+wheelbase: .3302
 
 vesc_driver:
   port: /dev/sensors/vesc
@@ -35,4 +35,4 @@ vesc_driver:
   position_min: 0.0
   position_max: 0.0
   servo_min: 0.15
-  servo_max: 0.85
+  servo_max: 0.98

@@ -9,7 +9,6 @@
 
 namespace vesc_ackermann
 {
-bool offsetApplied = false;
 
 template <typename T>
 inline bool getRequiredParam(const ros::NodeHandle& nh, std::string name, T& value);
@@ -63,7 +62,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   }
 
   // convert to engineering units
-  double current_speed = (state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
+  double current_speed = -(-state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
   double current_steering_angle(0.0), current_angular_velocity(0.0);
   if (std::fabs(current_speed) < 0.05){
     current_speed = 0.0;
@@ -84,28 +83,13 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   /** @todo could probably do better propigating odometry, e.g. trapezoidal integration */
 
   // propigate odometry
-double x_dot = current_speed;
-double y_dot = current_speed;
-  if (!offsetApplied) {
-    x_dot = x_dot * cos(yaw_ /*+ M_PI/2*/);
-    y_dot = y_dot * sin(yaw_ /*+ M_PI/2*/);    
-    }
-  else {
-    x_dot = x_dot * cos(yaw_);
-    y_dot = y_dot * sin(yaw_);       
-  }
+  double x_dot = current_speed * cos(yaw_);
+  double y_dot = current_speed * sin(yaw_);
+  x_ += x_dot * dt.toSec();
+  y_ += y_dot * dt.toSec();
+  if (use_servo_cmd_)
+    yaw_ += current_angular_velocity * dt.toSec();
 
-x_ += x_dot * dt.toSec();
-y_ += y_dot * dt.toSec();
-
-  //offset yaw_
-  if (use_servo_cmd_) {
-      if (!offsetApplied) {
-         //yaw_ += M_PI/2; // Add 180 degrees (π radians) as the offset
-         offsetApplied = true; // Set the flag to true to indicate that offset is applied
-      }
-      yaw_ += current_angular_velocity * dt.toSec(); // Update yaw angle with new value
-  }
 
   // save state for next time
   last_state_ = state;
@@ -121,7 +105,7 @@ y_ += y_dot * dt.toSec();
   odom->pose.pose.position.y = y_;
   odom->pose.pose.orientation.x = 0.0;
   odom->pose.pose.orientation.y = 0.0;
-  odom->pose.pose.orientation.z = -sin((yaw_ /*+ M_PI*/ )/2.0)*sin((yaw_)/2);
+  odom->pose.pose.orientation.z = sin((yaw_ /*+ M_PI*/ )/2.0);
   odom->pose.pose.orientation.w = cos((yaw_ /*+ M_PI*/ )/2.0);
 
   // Position uncertainty

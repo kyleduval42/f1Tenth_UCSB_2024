@@ -1,6 +1,6 @@
 # The distance between the front and
 # rear axle of the racecar
-wheelbase: 0.3302 # meters
+wheelbase: 0.25 # 0.3302 meters
 # width of racecar
 width: 0.2032 # meters
 
@@ -9,7 +9,7 @@ buffer_length: 5
 
 # Limits on the speed and steering angle
 max_speed: 10. #  meters/second
-max_steering_angle: 0.25 # radians
+max_steering_angle: 0.36 # radians
 max_accel: 7.51 # meters/second^2
 max_decel: 8.26 # meters/second^2
 max_steering_vel: 3.2 # radians/second
@@ -92,7 +92,7 @@ disparity_key_char: "p"
 new_key_char: "z"
 
 # Keyboard driving params
-keyboard_speed: 1.8  # meters/second
+keyboard_speed: 1.0  # meters/second
 keyboard_steer_ang: .3  # radians
 
 # obstacle parameters
