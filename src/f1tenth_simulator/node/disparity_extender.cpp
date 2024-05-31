@@ -3,6 +3,7 @@
 #include <ackermann_msgs/AckermannDrive.h>
 #include <sensor_msgs/LaserScan.h>
 #include <nav_msgs/Odometry.h>
+#include "std_msgs/Float32.h"
 
 // for printing
 #include <iostream>
@@ -22,6 +23,7 @@ private:
 
     // Listen for odom messages
     ros::Subscriber laser_sub;
+    ros::Subscriber speed_sub;
 
     // Publish drive data
     ros::Publisher drive_pub;
@@ -37,6 +39,9 @@ private:
     double side_fov = 70;           //fov angle for side control
     int average_ind = 10;    //Write average lookahead index MAY NEED TO CHANGE
     int straight_threshold = 1;
+
+    // Variable to store received speed data
+    float speed_data;
 
     bool debug = true; //TOGGLES DEBUG DATA
    
@@ -65,10 +70,16 @@ public:
 
         // Start a subscriber to listen to odom messages
         //odom_sub = n.subscribe(odom_topic, 1, &disparity_extender::odom_callback, this);
+	speed_sub = n.subscribe("/speed", 1, &disparity_extender::speed_callback, this);
         laser_sub = n.subscribe(scan_topic, 1, &disparity_extender::scan_callback, this);
 	    void scan_callback(const sensor_msgs::LaserScan & scan_msg);
     }
 
+    // Callback for speed
+    void speed_callback(const std_msgs::Float32::ConstPtr& speed_msg) {
+        // Extract speed data from the message
+        speed_data = speed_msg->data;
+    }
     void scan_callback(const sensor_msgs::LaserScan & scan_msg){
         //ARRAY INITIALIZATION
         //array writing for usable data
@@ -287,7 +298,7 @@ public:
     }
     
     drive_msg.speed =1*drive_msg.speed;
-    drive_msg.speed = 1.5;
+    drive_msg.speed = speed_data;
     
     drive_msg.steering_angle = -steering_angle;
   	drive_st_msg.drive = drive_msg;
